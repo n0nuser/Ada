@@ -1,5 +1,5 @@
 package body SensorLectorP is
-   protected body SensorLectorGen is
+   protected body SensorLectorCiu is
 
       entry leer (g : access Generador; result : out Integer) when datoDisponible is
       begin
@@ -16,5 +16,5 @@ package body SensorLectorP is
          Ada.Real_Time.Timing_Events.Set_Handler(entradaJitterControl, nextTime, Timer'Access);
       end Timer;
 
-   end SensorLectorGen;
+   end SensorLectorCiu;
 end SensorLectorP;

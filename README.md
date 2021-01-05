@@ -13,13 +13,11 @@
 
 # Requisitos
 
+Una tarea (que se lanza a los `0.3` segundos)  monitorizará cada segundo el valor de la energía producida y la consumida y en función de dichos valores mandará un mensaje a cada planta para que aumente, disminuya o mantenga la producción.
+
 ## Planta
 
-3 Plantas. Producen `0-30` Mw/h. El valor de inicio de producción es de `15` Mw para cada central. Las plantas cada tres segundos producen `+-1` Mw. Si es decimal no se incrementa/decrementa.
-
-En caso de que la diferencia de la producción/consumo sea superior a `3` Mw hay que actuar en las tres centrales a la vez, en caso de que sea `2` Mw sobre dos y en caso de que sea `1` Mw sobre una.
-
-Cada tarea planta quedará a la espera de recibir un mensaje de consultar, aumentar, disminuir o mantener la producción. En caso de no recibir ningún mensaje durante `5` segundos desde la última recepción de uno se imprime `ALERTA MONITORIZACIÓN ENERGÍA`. 
+3 Plantas. Producen `0-30` Mw/h. El valor de inicio de producción es de `15` Mw para cada central. Las plantas cada tres segundos producen `+-1` Mw. Si es decimal no se incrementa/decrementa. 
 
 ## Ciudad
 
@@ -27,9 +25,15 @@ Ciudad consumo `15-90` Mw/h. Consumo cada `6` segundos valor aleatorio entre `-3
 
 ## Consumo
 
-Si diferencia entre consumo y producción + de `5%` -> ALARMA: por la pantalla `PELIGRO SOBRECARGA consumo:VALOR producción:VALOR` en caso de sobreproducción o `PELIGRO BAJADA consumo:VALOR producción:VALOR` en caso de que el consumo sea superior, en otro caso se imprimirá `Estable consumo:VALOR producción:VALOR`.
+Si diferencia entre consumo y producción + de `5%` -> ALARMA.
 
-Una tarea (que se lanza a los `0.3` segundos)  monitorizará cada segundo el valor de la energía producida y la consumida y en función de dichos valores mandará un mensaje a cada planta para que aumente, disminuya o mantenga la producción.
+- En caso de sobreproducción por la pantalla `PELIGRO SOBRECARGA consumo:VALOR producción:VALOR`.
+- En caso de que el consumo sea superior `PELIGRO BAJADA consumo:VALOR producción:VALOR`.
+- En otro caso se imprimirá `Estable consumo:VALOR producción:VALOR`.
+
+En caso de que la diferencia de la producción/consumo sea superior a `3` Mw hay que actuar en las tres centrales a la vez, en caso de que sea `2` Mw sobre dos y en caso de que sea `1` Mw sobre una.
+
+Cada tarea planta quedará a la espera de recibir un mensaje de consultar, aumentar, disminuir o mantener la producción. En caso de no recibir ningún mensaje durante `5` segundos desde la última recepción de uno se imprime `ALERTA MONITORIZACIÓN ENERGÍA`.
 
 ## Retardos
 

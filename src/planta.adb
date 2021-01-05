@@ -11,14 +11,9 @@ package body Planta is
          produccion := produccion + incremento; --Incrementa produccion con la produccion que se le haya pasado
       end incrementar;
 
-      procedure decrementar (decremento : Integer) is
-      begin
-         produccion := produccion - decremento;
-      end decrementar;
-
       procedure abrirDispositivo is
       begin
-         nextTime := bajarPeriodo + Clock;
+         nextTime := periodoProduccion + Clock;
          --Para abrir la compuerta lo que hace la funcion de abajo es llamar a Timer cada vez que pasa un segundo
          Ada.Real_Time.Timing_Events.Set_Handler(bajarJitterControl, nextTime, Timer'Access);
       end abrirDispositivo;
@@ -32,8 +27,8 @@ package body Planta is
       procedure Timer (event : in out Ada.Real_Time.Timing_Events.Timing_Event)
       is
       begin
-         produccion := produccion - 50; --Baja la produccion 50 cada segundo
-         nextTime   := bajarPeriodo + Clock;
+         produccion := produccion - 50; --Baja la produccion 50 cada 3 segundos
+         nextTime   := periodoProduccion + Clock;
          --Eliminar comprobacion
          Ada.Text_IO.Put_Line ("produccion bajada: " & produccion'Img);
          Ada.Real_Time.Timing_Events.Set_Handler(bajarJitterControl, nextTime, Timer'Access);

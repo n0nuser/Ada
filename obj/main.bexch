@@ -1,0 +1,25 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\adri_\Desktop\Practica\tareas.gpr
+20191208194844
+[BOUND OBJECT FILES]
+C:\Users\adri_\Desktop\Practica\obj\central.o
+C:\Users\adri_\Desktop\Practica\obj\ActuadorEscritorP.o
+C:\Users\adri_\Desktop\Practica\obj\SensorLectorP.o
+C:\Users\adri_\Desktop\Practica\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\adri_\Desktop\Practica\obj\
+-LC:\Users\adri_\Desktop\Practica\obj\
+-LC:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/libgnarl.a
+C:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/libgnat.a
+-Xlinker
+--stack=0x200000,0x1000
+-mthreads

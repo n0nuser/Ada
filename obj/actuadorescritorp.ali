@@ -1,0 +1,146 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_PROTECTED_TYPES
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U actuadorescritorp%b	actuadorescritorp.adb	c1d9d239 NE OO PK IL
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+
+U actuadorescritorp%s	actuadorescritorp.ads	e0d16ff1 EE NE OO PK IL
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.timing_events%s  a-rttiev.adb	a-rttiev.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W central%s		central.adb		central.ali
+W system%s		system.ads		system.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W text_io%s		text_io.ads		text_io.ali
+
+D actuadorescritorp.ads	20191214133120 1d4c5b4e actuadorescritorp%s
+D actuadorescritorp.adb	20191208194916 dc958977 actuadorescritorp%b
+D ada.ads		20190518041256 76789da1 ada%s
+D a-except.ads		20190518041256 291912d5 ada.exceptions%s
+D a-finali.ads		20190518041256 bf4f806b ada.finalization%s
+D a-ioexce.ads		20190518041256 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20190518041258 0240fc73 ada.real_time%s
+D a-rttiev.ads		20190518041258 22f35a33 ada.real_time.timing_events%s
+D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041258 491b781d ada.tags%s
+D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D central.ads		20191214132750 ce3cdb5f central%s
+D interfac.ads		20190518041256 5ab55268 interfaces%s
+D i-c.ads		20190518041256 5421119b interfaces.c%s
+D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
+D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
+D system.ads		20190518041258 32a08138 system%s
+D s-atacco.ads		20190518041258 4c36d12f system.address_to_access_conversions%s
+D s-conca2.ads		20190518041256 02a0d7d0 system.concat_2%s
+D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
+D s-finroo.ads		20190518041258 4ff27390 system.finalization_root%s
+D s-imgint.ads		20190518041256 02dbe0c2 system.img_int%s
+D s-multip.ads		20190518041256 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20190518041258 97504df8 system.os_interface%s
+D s-parame.ads		20190518041258 48ec542b system.parameters%s
+D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
+D s-stausa.ads		20190518041256 017a0a05 system.stack_usage%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20190518041258 601f6b72 system.task_info%s
+D s-taspri.ads		20190518041258 6c1d93d4 system.task_primitives%s
+D s-taprop.ads		20190518041258 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20190518041258 b9d612e2 system.tasking%s
+D s-taprob.ads		20190518041258 acd6094d system.tasking.protected_objects%s
+D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
+D s-win32.ads		20190518041256 90ecf4e6 system.win32%s
+D text_io.ads		20190518041256 21b2c898 text_io%s
+G a e
+G c Z s b [abrir actuadorescritorp__actuadorescritor 13 17 none]
+G c Z s b [cerrar actuadorescritorp__actuadorescritor 14 17 none]
+G c Z s b [timer actuadorescritorp__actuadorescritor 15 17 none]
+G c Z s b [actuadorescritor__abrirN actuadorescritorp 13 7 none]
+G c Z s b [actuadorescritor__abrirP actuadorescritorp 13 7 none]
+G c Z s b [actuadorescritor__cerrarN actuadorescritorp 14 7 none]
+G c Z s b [actuadorescritor__cerrarP actuadorescritorp 14 7 none]
+G c Z s b [actuadorescritor__timerN actuadorescritorp 15 7 none]
+G c Z s b [actuadorescritor__timerP actuadorescritorp 15 7 none]
+G c Z s s [actuadorescritorVDI actuadorescritorp 11 4 none]
+G c Z s s [actuadorescritorVDF actuadorescritorp 11 4 none]
+G c Z s s [actuadorescritorVIP actuadorescritorp 11 4 none]
+G r p none [abrir actuadorescritorp__actuadorescritor 13 17 none] [abrirpuerta central__reactor 9 17 none]
+G r p none [cerrar actuadorescritorp__actuadorescritor 14 17 none] [cerrarpuerta central__reactor 10 17 none]
+X 1 actuadorescritorp.ads
+9K9*ActuadorEscritorP 25l5 25e22 2|1b14 35l5 35t22
+10I9*ActuadorDato<integer> 19r19
+11W19*ActuadorEscritor 17E7 24l8 24e24 2|2b21 33l8 33t24
+13U17 abrir 13^23 13>42 2|3b17 13l11 13t16
+13p23 r(13|5W19) 2|3b23 9r13
+13i42 id{integer} 2|3b43 6r67 10r65
+14U17 cerrar 14^24 14>43 2|15b17 25l11 25t17
+14p24 r(13|5W19) 2|15b24 21r13
+14i43 id{integer} 2|15b43 18r63 22r66
+15U17 Timer 15=23 2|8r84 20r84 27b17 31r81 32l11 32t16
+15r23 event{8|40R9} 2|27b23
+17o7 nextTime{7|49O9} 2|7r13 8r74 19r13 20r74 30r10 30r20 31r71
+18b7 cerrado{boolean} 2|5r13 11r13 17r13 23r13
+19i7 escribiendo{10I9}
+20r7 salidaJitterControl{8|40R9} 2|8r53 20r53 31r50
+22o7 salidaPeriodo{7|54O9} 2|7r33 19r33 30r29
+X 3 ada.ads
+16K9*Ada 1|2r6 3r5 4r6 5r5 15r37 17r16 20r27 22r21 22r46 2|8r13 20r13 27r36
+. 31r10 3|20e8
+X 7 a-reatim.ads
+39K13*Real_Time 1|2w10 3r9 4r10 5r9 15r41 17r20 20r31 22r25 22r50 2|8r17
+. 20r17 27r40 31r14 7|185e18
+49O9*Time<duration> 1|17r30
+54O9*Time_Span<duration> 1|22r35
+61V13*Clock{49O9} 2|7s25 19s25
+65V14*"+"{49O9} 2|7s31 19s31 30s28
+119V13*Milliseconds{54O9} 1|22s60
+X 8 a-rttiev.ads
+38K23*Timing_Events 1|4w20 15r51 20r41 2|8r27 20r27 27r50 31r24 8|81e32
+40R9*Timing_Event<5|50R9> 1|15r65 20r55 2|27r64 8|75e14
+45U14*Set_Handler 2|8s41 20s41 31s38
+X 11 a-textio.ads
+508U14*Put_Line 2|6s21 10s21 18s21 22s21
+X 13 central.ads
+4K9*Central 1|7w6 7r19 13|18e12
+5W19*Reactor 1|13r33 14r34 2|3r33 15r34 13|17e15
+9U17 abrirPuerta 2|9s15
+10U17 cerrarPuerta 2|21s15
+X 18 system.ads
+37K9*System 1|1w6 12r33 18|200e11
+100I12*Any_Priority{integer}
+102I12*Interrupt_Priority{100I12} 1|12r40
+X 32 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 44 text_io.ads
+24K9*Text_IO=24:29 1|6w6 2|6r13 10r13 18r13 22r13
+
