@@ -1,5 +1,5 @@
 package body ActuadorEscritorP is
-   protected body ActuadorEscritor is
+   protected body ActuadorEscritorGen is
       procedure abrir(c: access Generador;  id: Integer) is
       begin
          if cerrado = true then --Si es llamado cuando la compuerta esta abierta no hace nada
@@ -30,7 +30,7 @@ package body ActuadorEscritorP is
          nextTime := nextTime+salidaPeriodo;
          Ada.Real_Time.Timing_Events.Set_Handler(salidaJitterControl, nextTime, Timer'Access);
       end Timer;
-   end ActuadorEscritor;
+   end ActuadorEscritorGen;
 
 end ActuadorEscritorP;
 

@@ -11,14 +11,9 @@ package body Ciudad is
          consumo := consumo + incremento; --Incrementa consumo con la consumo que se le haya pasado
       end incrementar;
 
-      procedure decrementar (decremento : Integer) is
-      begin
-         consumo := consumo - decremento;
-      end decrementar;
-
       procedure abrirDispositivo is
       begin
-         nextTime := bajarPeriodo + Clock;
+         nextTime := periodoConsumo + Clock;
          --Para abrir la compuerta lo que hace la funcion de abajo es llamar a Timer cada vez que pasa un segundo
          Ada.Real_Time.Timing_Events.Set_Handler(bajarJitterControl, nextTime, Timer'Access);
       end abrirDispositivo;
@@ -33,7 +28,7 @@ package body Ciudad is
       is
       begin
          consumo := consumo - 50; --Baja la consumo 50 cada segundo
-         nextTime   := bajarPeriodo + Clock;
+         nextTime   := periodoConsumo + Clock;
          --Eliminar comprobacion
          Ada.Text_IO.Put_Line ("consumo bajada: " & consumo'Img);
          Ada.Real_Time.Timing_Events.Set_Handler(bajarJitterControl, nextTime, Timer'Access);
