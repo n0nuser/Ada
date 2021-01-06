@@ -1,6 +1,6 @@
-package body ActuadorEscritorP is
+package body ActuadorEscritorC is
    protected body ActuadorEscritorCiu is
-      procedure abrir(c: access Generador;  id: Integer) is
+      procedure abrir(c: access ConsumoCiudad;  id: Integer) is
       begin
          if cerrado = true then --Si es llamado cuando la compuerta esta abierta no hace nada
             Text_IO.Put_Line("Abriendo compuerta del generador: " & id'Img);
@@ -12,7 +12,7 @@ package body ActuadorEscritorP is
          end if;
       end abrir;
 
-      procedure cerrar(c: access Generador; id: Integer)  is
+      procedure cerrar(c: access ConsumoCiudad; id: Integer)  is
       begin
          if cerrado = false then --Si es llamado cuando la compuerta esta cerrada no hace nada
             Text_IO.Put_Line("Cerrando compuerta generador: " & id'Img);
@@ -32,5 +32,5 @@ package body ActuadorEscritorP is
       end Timer;
    end ActuadorEscritorCiu;
 
-end ActuadorEscritorP;
+end ActuadorEscritorC;
 

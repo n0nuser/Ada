@@ -1,9 +1,9 @@
-package body SensorLectorP is
+package body SensorLectorC is
    protected body SensorLectorCiu is
 
-      entry leer (g : access Generador; result : out Integer) when datoDisponible is
+      entry leer (c : access ConsumoCiudad; result : out Integer) when datoDisponible is
       begin
-         g.leer(result); --Llama a la funcion del generador, leer. Result contendra la produccion del generador.
+         c.leer(result); --Llama a la funcion del generador, leer. Result contendra la produccion del generador.
          --datoDisponible:=False;
       end leer;
 
@@ -17,4 +17,4 @@ package body SensorLectorP is
       end Timer;
 
    end SensorLectorCiu;
-end SensorLectorP;
+end SensorLectorC;
