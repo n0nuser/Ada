@@ -14,7 +14,6 @@ package SensorLectorP is
       nextTime             : Ada.Real_Time.Time;
       datoDisponible       : Boolean := True;
       entradaJitterControl : Ada.Real_Time.Timing_Events.Timing_Event;
-      --400ms -20ms del input jitter
       entradaPeriodo : Ada.Real_Time.Time_Span := Ada.Real_Time.Milliseconds(150); --Simula el tiempo que tarda en leer la produccion
    end SensorLectorGen;
 end SensorLectorP;
