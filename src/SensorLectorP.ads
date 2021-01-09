@@ -12,7 +12,6 @@ package SensorLectorP is
       procedure Timer(event : in out Ada.Real_Time.Timing_Events.Timing_Event);
    private
       nextTime             : Ada.Real_Time.Time;
-      datoDisponible       : Boolean := True;
       entradaJitterControl : Ada.Real_Time.Timing_Events.Timing_Event;
       entradaPeriodo : Ada.Real_Time.Time_Span := Ada.Real_Time.Milliseconds(150); --Simula el tiempo que tarda en leer la produccion
    end SensorLectorGen;

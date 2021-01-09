@@ -1,0 +1,101 @@
+V "GNAT Lib v2020"
+A -gnatA
+A -gnatc
+A -mtune=generic
+A -march=x86-64
+P NO FX
+
+RN
+RV NO_IO
+RV NO_PROTECTED_TYPES
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U actuadorescritorc%s	actuadorescritorc.ads	71da9be3 EE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.timing_events%s  a-rttiev.adb	a-rttiev.ali
+W ciudad%s		ciudad.adb		ciudad.ali
+W system%s		system.ads		system.ali
+W text_io%s		text_io.ads		text_io.ali
+
+D actuadorescritorc.ads	20210106112024 092f8e10 actuadorescritorc%s
+D ada.ads		20200228061810 76789da1 ada%s
+D a-except.ads		20200228061810 a7106115 ada.exceptions%s
+D a-finali.ads		20200228061810 bf4f806b ada.finalization%s
+D a-ioexce.ads		20200228061810 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20200228061810 0240fc73 ada.real_time%s
+D a-rttiev.ads		20200228061810 22f35a33 ada.real_time.timing_events%s
+D a-stream.ads		20200228061810 119b8fb3 ada.streams%s
+D a-textio.ads		20200228061810 aef4d56d ada.text_io%s
+D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
+D ciudad.ads		20210105103134 4b54fa13 ciudad%s
+D interfac.ads		20200228061810 5ab55268 interfaces%s
+D i-c.ads		20200228061810 c624fa43 interfaces.c%s
+D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
+D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
+D system.ads		20200228061810 32a08138 system%s
+D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
+D s-crtl.ads		20200228061810 0ebbdb71 system.crtl%s
+D s-ficobl.ads		20200228061810 078245e4 system.file_control_block%s
+D s-finroo.ads		20200228061810 4ff27390 system.finalization_root%s
+D s-multip.ads		20200228061810 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20200228061810 97504df8 system.os_interface%s
+D s-parame.ads		20200228061810 4752c4cb system.parameters%s
+D s-secsta.ads		20200327060540 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200228061810 a7318a92 system.soft_links%s
+D s-stache.ads		20200228061810 a37c21ec system.stack_checking%s
+D s-stausa.ads		20200228061810 017a0a05 system.stack_usage%s
+D s-stalib.ads		20200228061810 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200228061810 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20200228061810 601f6b72 system.task_info%s
+D s-taspri.ads		20200228061810 6c1d93d4 system.task_primitives%s
+D s-taprop.ads		20200228061810 6eefbe12 system.task_primitives.operations%s
+D s-taskin.ads		20200228061810 88fba9ad system.tasking%s
+D s-traent.ads		20200228061810 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200319060540 5ecf7212 system.unsigned_types%s
+D s-wchcon.ads		20200228061810 1b7d22d2 system.wch_con%s
+D s-win32.ads		20200228061810 15ac53fb system.win32%s
+D text_io.ads		20200228061810 21b2c898 text_io%s
+G a Z
+X 1 actuadorescritorc.ads
+9K9*ActuadorEscritorC 24l5 24e22
+10I9*ActuadorDato<integer> 19r19
+11W19*ActuadorEscritorCiu 17E7 23l8 23e27
+13U17 abrir 13^23 13>48
+13p23 c(11|4W19)
+13i48 id{integer}
+14U17 cerrar 14^24 14>49
+14p24 c(11|4W19)
+14i49 id{integer}
+15U17 Timer 15=23
+15r23 event{7|40R9}
+17o7 nextTime{6|49O9}
+18b7 cerrado{boolean}
+19i7 escribiendo{10I9}
+20r7 salidaJitterControl{7|40R9}
+21o7 salidaPeriodo{6|54O9}
+X 2 ada.ads
+16K9*Ada 1|2r6 3r5 4r6 5r5 15r37 17r16 20r27 21r21 21r46 2|20e8
+X 6 a-reatim.ads
+39K13*Real_Time 1|2w10 3r9 4r10 5r9 15r41 17r20 20r31 21r25 21r50 6|185e18
+49O9*Time<duration> 1|17r30
+54O9*Time_Span<duration> 1|21r35
+119V13*Milliseconds{54O9} 1|21s60
+X 7 a-rttiev.ads
+38K23*Timing_Events 1|4w20 15r51 20r41 7|81e32
+40R9*Timing_Event<4|50R9> 1|15r65 20r55 7|75e14
+X 11 ciudad.ads
+3K9*Ciudad 1|7w6 7r29 11|16e11
+4W19*ConsumoCiudad 1|13r33 14r34 11|15e21
+X 16 system.ads
+37K9*System 1|1w6 12r33 16|200e11
+100I12*Any_Priority{integer}
+102I12*Interrupt_Priority{100I12} 1|12r40
+X 27 s-stausa.ads
+208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
+273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
+X 38 text_io.ads
+24K9*Text_IO=24:29 1|6w6
+

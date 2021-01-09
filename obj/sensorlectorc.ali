@@ -1,0 +1,114 @@
+V "GNAT Lib v2020"
+A -gnatA
+A -gnatc
+A -mtune=generic
+A -march=x86-64
+P NO FX
+
+RN
+RV NO_IO
+RV NO_PROTECTED_TYPES
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV MAX_PROTECTED_ENTRIES=1
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U sensorlectorc%b	sensorlectorc.adb	35916bf1 OO PK
+
+U sensorlectorc%s	sensorlectorc.ads	77e7b1d4 EE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.timing_events%s  a-rttiev.adb	a-rttiev.ali
+W ciudad%s		ciudad.adb		ciudad.ali
+W system%s		system.ads		system.ali
+W text_io%s		text_io.ads		text_io.ali
+
+D ada.ads		20200228061810 76789da1 ada%s
+D a-except.ads		20200228061810 a7106115 ada.exceptions%s
+D a-finali.ads		20200228061810 bf4f806b ada.finalization%s
+D a-ioexce.ads		20200228061810 e4a01f64 ada.io_exceptions%s
+D a-numeri.ads		20200228061810 bb51c45a ada.numerics%s
+D a-nudira.ads		20200228061810 5984dff3 ada.numerics.discrete_random%s
+D a-reatim.ads		20200228061810 0240fc73 ada.real_time%s
+D a-rttiev.ads		20200228061810 22f35a33 ada.real_time.timing_events%s
+D a-stream.ads		20200228061810 119b8fb3 ada.streams%s
+D a-textio.ads		20200228061810 aef4d56d ada.text_io%s
+D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
+D ciudad.ads		20210106165838 c32c0894 ciudad%s
+D interfac.ads		20200228061810 5ab55268 interfaces%s
+D i-c.ads		20200228061810 c624fa43 interfaces.c%s
+D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
+D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
+D sensorlectorc.ads	20210107110756 876a56a0 sensorlectorc%s
+D sensorlectorc.adb	20210107110926 b2fb3d51 sensorlectorc%b
+D system.ads		20200228061810 32a08138 system%s
+D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
+D s-crtl.ads		20200228061810 0ebbdb71 system.crtl%s
+D s-ficobl.ads		20200228061810 078245e4 system.file_control_block%s
+D s-finroo.ads		20200228061810 4ff27390 system.finalization_root%s
+D s-multip.ads		20200228061810 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20200228061810 97504df8 system.os_interface%s
+D s-parame.ads		20200228061810 4752c4cb system.parameters%s
+D s-rannum.ads		20200228061810 99ade2f2 system.random_numbers%s
+D s-secsta.ads		20200327060540 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200228061810 a7318a92 system.soft_links%s
+D s-stache.ads		20200228061810 a37c21ec system.stack_checking%s
+D s-stausa.ads		20200228061810 017a0a05 system.stack_usage%s
+D s-stalib.ads		20200228061810 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200228061810 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20200228061810 601f6b72 system.task_info%s
+D s-taspri.ads		20200228061810 6c1d93d4 system.task_primitives%s
+D s-taprop.ads		20200228061810 6eefbe12 system.task_primitives.operations%s
+D s-taskin.ads		20200228061810 88fba9ad system.tasking%s
+D s-traent.ads		20200228061810 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200319060540 5ecf7212 system.unsigned_types%s
+D s-wchcon.ads		20200228061810 1b7d22d2 system.wch_con%s
+D s-win32.ads		20200228061810 15ac53fb system.win32%s
+D text_io.ads		20200228061810 21b2c898 text_io%s
+G a e
+G c Z s b [leer sensorlectorc__sensorlectorciu 11 13 none]
+G c Z s b [timer sensorlectorc__sensorlectorciu 12 17 none]
+X 1 ada.ads
+16K9*Ada 20e8 17|2r6 2r39 3r6 3r39 12r38 14r30 15r30 16r24 16r51 18|9r39
+. 14r10
+X 7 a-reatim.ads
+39K13*Real_Time 185e18 17|2w10 2r43 3r10 3r43 12r42 14r34 15r34 16r28 16r55
+. 18|9r43 14r14
+49O9*Time<duration> 17|14r44
+54O9*Time_Span<duration> 17|16r38
+65V14*"+"{49O9} 18|13s37
+119V13*Milliseconds{54O9} 17|16s65
+X 8 a-rttiev.ads
+38K23*Timing_Events 81e32 17|3w20 12r52 15r44 18|9r53 14r24
+40R9*Timing_Event<3|50R9> 75e14 17|12r66 15r58 18|9r67
+45U14*Set_Handler 18|14s38
+X 12 ciudad.ads
+5K9*Ciudad 21e11 17|5w6 5r18
+9W19*ConsumoCiudad 20e21 17|11r30 18|4r29
+10U17 leer 18|6s12
+X 17 sensorlectorc.ads
+7K9*SensorLectorC 18l5 18e18 18|1b14 18l5 18t18
+8I9*SensorDato<integer>
+9W19*SensorLectorCiu 14E7 17l8 17e23 18|2b19 17l8 17t23
+11Y13 leer 11^19 11<45 18|4b13 7l11 7t15
+11p19 c(12|9W19) 18|6r10
+11i45 result{integer} 18|6m17
+12U17 Timer 12=23 18|9b17 14r82 15l11 15t16
+12r23 event{8|40R9} 18|9b24
+14o7 nextTime{7|49O9} 18|13m10 13r28 14r72
+15r7 entradaJitterControl{8|40R9} 18|14m50 14r50
+16o7 entradaPeriodo{7|54O9} 18|13r39
+X 18 sensorlectorc.adb
+4p18 c(12|9W19)
+4i44 result{integer}
+X 19 system.ads
+37K9*System 17|1w6 10r34 19|200e11
+100I12*Any_Priority{integer}
+102I12*Interrupt_Priority{100I12} 17|10r41
+X 31 s-stausa.ads
+208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
+273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
+X 42 text_io.ads
+24K9*Text_IO=24:29 17|4w6
+

@@ -27,10 +27,15 @@ package body Planta is
       procedure Timer (event : in out Ada.Real_Time.Timing_Events.Timing_Event)
       is
       begin
-         produccion := produccion - 50; --Baja la produccion 50 cada 3 segundos
+         temp := Aleatorio.Random(seed);
+         if temp = 1 then
+            produccion := produccion - 1;
+            --Ada.Text_IO.Put_Line("# Decrementando produccion de generador");
+         elsif temp = 2 then
+            produccion := produccion + 1;
+            --Ada.Text_IO.Put_Line("# Incrementando produccion de generador");
+         end if;
          nextTime   := periodoProduccion + Clock;
-         --Eliminar comprobacion
-         Ada.Text_IO.Put_Line ("produccion bajada: " & produccion'Img);
          Ada.Real_Time.Timing_Events.Set_Handler(bajarJitterControl, nextTime, Timer'Access);
       end Timer;
 

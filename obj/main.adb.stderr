@@ -1,6 +1,0 @@
-main.adb:160:19: expected an access type with designated type "Generador" defined at planta.ads:4
-main.adb:160:19: found an access type with designated type "ConsumoCiudad" defined at ciudad.ads:4
-main.adb:164:24: expected an access type with designated type "Generador" defined at planta.ads:4
-main.adb:164:24: found an access type with designated type "ConsumoCiudad" defined at ciudad.ads:4
-main.adb:171:24: expected an access type with designated type "Generador" defined at planta.ads:4
-main.adb:171:24: found an access type with designated type "ConsumoCiudad" defined at ciudad.ads:4

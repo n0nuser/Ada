@@ -9,6 +9,7 @@ package Ciudad is
    protected type ConsumoCiudad is
       procedure leer (temp : out Integer);
       procedure abrirDispositivo;
+      procedure cerrarDispositivo;
       procedure Timer(event : in out Ada.Real_Time.Timing_Events.Timing_Event);
    private
       seed     : AleatorioCon.Generator;
