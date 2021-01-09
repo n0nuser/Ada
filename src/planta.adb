@@ -14,7 +14,6 @@ package body Planta is
       procedure abrirDispositivo is
       begin
          nextTime := periodoProduccion + Clock;
-         --Para abrir la compuerta lo que hace la funcion de abajo es llamar a Timer cada vez que pasa un segundo
          Ada.Real_Time.Timing_Events.Set_Handler(bajarJitterControl, nextTime, Timer'Access);
       end abrirDispositivo;
 
