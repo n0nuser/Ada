@@ -14,6 +14,11 @@ package body Ciudad is
          Ada.Real_Time.Timing_Events.Set_Handler(jitterControl, nextTime, Timer'Access);
       end abrirDispositivo;
 
+      procedure cerrarDispositivo is
+      begin
+         Ada.Real_Time.Timing_Events.Set_Handler(jitterControl, nextTime, null);
+      end cerrarDispositivo;
+
       procedure Timer (event : in out Ada.Real_Time.Timing_Events.Timing_Event)
       is
       begin
@@ -21,10 +26,7 @@ package body Ciudad is
          tempCon := AleatorioCon.Random(seed); --Genera aleatoriamente un numero del -3 al 3
          consumo := consumo + tempCon; --Aumenta/disminuye el consumo un valor entre -3 y 3 cada 6 segundos
          nextTime   := periodoConsumo + Clock;
-         --Eliminar comprobacion
-         Ada.Text_IO.Put_Line ("Consumo actual de la ciudad: " & consumo'Img);
          Ada.Real_Time.Timing_Events.Set_Handler(jitterControl, nextTime, Timer'Access);
       end Timer;
-
    end ConsumoCiudad;
 end Ciudad;

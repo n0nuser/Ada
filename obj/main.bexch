@@ -1,25 +1,26 @@
 [GENERATED OBJECT FILE]
 b__main.o
 [PROJECT FILES]
-C:\Users\adri_\Desktop\Practica\tareas.gpr
-20191208194844
+D:\Compartido\Documentos\Trabajo2020\Practica\tareas.gpr
+20210104110914 6f117ca1cbccee8b9601e7e3dabe54a4
 [BOUND OBJECT FILES]
-C:\Users\adri_\Desktop\Practica\obj\central.o
-C:\Users\adri_\Desktop\Practica\obj\ActuadorEscritorP.o
-C:\Users\adri_\Desktop\Practica\obj\SensorLectorP.o
-C:\Users\adri_\Desktop\Practica\obj\main.o
+D:\Compartido\Documentos\Trabajo2020\Practica\obj\ciudad.o
+D:\Compartido\Documentos\Trabajo2020\Practica\obj\planta.o
+D:\Compartido\Documentos\Trabajo2020\Practica\obj\ActuadorEscritorP.o
+D:\Compartido\Documentos\Trabajo2020\Practica\obj\SensorLectorP.o
+D:\Compartido\Documentos\Trabajo2020\Practica\obj\main.o
 [GENERATED SOURCE FILES]
 b__main.ads
 b__main.adb
 b__main.ali
 [RESULTING OPTIONS]
--LC:\Users\adri_\Desktop\Practica\obj\
--LC:\Users\adri_\Desktop\Practica\obj\
--LC:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/
+-LD:\Compartido\Documentos\Trabajo2020\Practica\obj\
+-LD:\Compartido\Documentos\Trabajo2020\Practica\obj\
+-LC:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/
 -static
 -static-libgcc
-C:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/libgnarl.a
-C:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/libgnat.a
+C:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/libgnarl.a
+C:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/libgnat.a
 -Xlinker
 --stack=0x200000,0x1000
 -mthreads
