@@ -4,13 +4,12 @@ package body Ciudad is
    protected body ConsumoCiudad is
       procedure leer (temp : out Integer) is
       begin
-         temp := consumo; --Guarda en la varible temp la consumo que tenga ese momento el generador
+         temp := consumo;
       end leer;
 
       procedure abrirDispositivo is
       begin
          nextTime := periodoConsumo + Clock;
-         --Para abrir la compuerta lo que hace la funcion de abajo es llamar a Timer cada vez que pasa un segundo
          Ada.Real_Time.Timing_Events.Set_Handler(jitterControl, nextTime, Timer'Access);
       end abrirDispositivo;
 

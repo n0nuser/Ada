@@ -33,29 +33,26 @@ procedure Main is
       Ada.Text_IO.Put_Line(Ada.Calendar.Formatting.Image(Ada.Calendar."+"(Epoch, Dur)));
    end PrintRT;
 
-   --Tarea de los generadores. Cada generador ejecutara estas tareas
+
    task type tareaGenerador (g : access Generador; id : Integer)
-   is --Parametros: Puntero al generador y el id del generador(1,2,3)
+   is
       entry avisarme;
    end tareaGenerador;
    task body tareaGenerador is
-      act       : aliased ActuadorEscritorGen;
-      espera : Duration := 1.0;
-      tiempoDelay : Ada.Calendar.Time;
+      act : aliased ActuadorEscritorGen;
    begin
       act.mantenerEstable(g, id);
-      tiempoDelay := espera + Clock;
       loop
-         delay until tiempoDelay;
          select
             accept avisarme do
                begin
-                  Text_IO.Put_Line("ME HA LLEGADO EL AVISARME GENERADOR " & id'Img);
+                  --Text_IO.Put_Line("ME HA LLEGADO EL AVISARME GENERADOR " & id'Img);
                   --act.mantenerEstable(g, id);
                   null;
                end;
             end avisarme;
-         or delay 5.0;
+         or
+            delay 5.0;
             Text_IO.Put_Line("ALERTA MONITORIZACION ENERGIA GENERADOR " & id'Img);
          end select;
       end loop;
@@ -76,105 +73,102 @@ procedure Main is
       porcentajeConsumo : Float;
       porcentajeDiferencia : Float;
       ProduccionGlobal : Integer := 0;
+      timer : Ada.Calendar.Time;
       aviso1 : tareaGenerador(g(1)'Access, 1);
       aviso2 : tareaGenerador(g(2)'Access, 2);
       aviso3 : tareaGenerador(g(3)'Access, 3);
    begin
       delay until (delayInicio + Clock);
+      timer := delayNormal + Clock;
       loop
-         begin
-            delay until (delayNormal + Clock);
-            -- CONSULTA
-            --aviso1.avisarme;
-            sen.leer(g(1)'Access, Produccion1);
-            --aviso2.avisarme;
-            sen.leer(g(2)'Access, Produccion2);
-            --aviso3.avisarme;
-            sen.leer(g(3)'Access, Produccion3);
+         -- CONSULTA
+         sen.leer(g(1)'Access, Produccion1);
+         aviso1.avisarme;
+         sen.leer(g(2)'Access, Produccion2);
+         aviso2.avisarme;
+         sen.leer(g(3)'Access, Produccion3);
+         aviso3.avisarme;
 
-            c.leer(consumoGlobal);
+         c.leer(consumoGlobal);
 
-            ProduccionGlobal := Produccion1 + Produccion2 + Produccion3;
-            diferencia := ProduccionGlobal - consumoGlobal;
-            porcentajeProduccion := (100.0 * Float(ProduccionGlobal)) / 90.0;
-            porcentajeConsumo := (100.0 * Float(ConsumoGlobal)) / 90.0;
-            porcentajeDiferencia := porcentajeProduccion - porcentajeConsumo;
+         ProduccionGlobal := Produccion1 + Produccion2 + Produccion3;
+         diferencia := ProduccionGlobal - consumoGlobal;
+         porcentajeProduccion := (100.0 * Float(ProduccionGlobal)) / 90.0;
+         porcentajeConsumo := (100.0 * Float(ConsumoGlobal)) / 90.0;
+         porcentajeDiferencia := porcentajeProduccion - porcentajeConsumo;
 
-            -- GESTION AUMENTO, DECREMENTO, ESTABILIZACION
-            Text_IO.Put_Line("");
-            if porcentajeDiferencia > 5.0 then
-               PrintRT;
-               Text_IO.Put_Line("PELIGRO SOBRECARGA consumo:" & ConsumoGlobal'Img & " produccion:" & ProduccionGlobal'Img);
-            elsif porcentajeDiferencia < -5.0 then
-               PrintRT;
-               Text_IO.Put_Line("PELIGRO BAJADA consumo:" & ConsumoGlobal'Img & " produccion:" & ProduccionGlobal'Img);
-            else
-               PrintRT;
-               Text_IO.Put_Line("Estable consumo:" & ConsumoGlobal'Img & " produccion:" & ProduccionGlobal'Img);
-            end if;
-            Text_IO.Put_Line("");
-            if diferencia >= 3 then
-               PrintRT;
-               Text_IO.Put_Line("### DIFERENCIA MAYOR QUE 3 # Diferencia: " & diferencia'Img);
-                aviso1.avisarme;
-               act.decrementar(g(1)'Access, 1);
-               aviso2.avisarme;
-               act.decrementar(g(2)'Access, 2);
-              aviso3.avisarme;
-               act.decrementar(g(3)'Access, 3);
+         -- GESTION AUMENTO, DECREMENTO, ESTABILIZACION
+         Text_IO.Put_Line("");
+         if porcentajeDiferencia > 5.0 then
+            PrintRT;
+            Text_IO.Put_Line("PELIGRO SOBRECARGA consumo:" & ConsumoGlobal'Img & " produccion:" & ProduccionGlobal'Img);
+         elsif porcentajeDiferencia < -5.0 then
+            PrintRT;
+            Text_IO.Put_Line("PELIGRO BAJADA consumo:" & ConsumoGlobal'Img & " produccion:" & ProduccionGlobal'Img);
+         else
+            PrintRT;
+            Text_IO.Put_Line("Estable consumo:" & ConsumoGlobal'Img & " produccion:" & ProduccionGlobal'Img);
+         end if;
+         Text_IO.Put_Line("");
 
-            elsif diferencia >= 2 then
-               PrintRT;
-               Text_IO.Put_Line("### DIFERENCIA MAYOR QUE 2 # Diferencia: " & diferencia'Img);
-               aviso1.avisarme;
-               act.decrementar(g(1)'Access, 1);
-               aviso2.avisarme;
-               act.decrementar(g(2)'Access, 2);
-
-            elsif diferencia >= 1 then
-               PrintRT;
-               Text_IO.Put_Line("### DIFERENCIA MAYOR QUE 1 # Diferencia: " & diferencia'Img);
-               aviso1.avisarme;
-               act.decrementar(g(1)'Access, 1);
-
-            elsif diferencia <= -3 then
-               PrintRT;
-               Text_IO.Put_Line("### DIFERENCIA MENOR QUE -3 # Diferencia: " & diferencia'Img);
-               aviso1.avisarme;
-               act.incrementar(g(1)'Access, 1);
-               aviso2.avisarme;
-               act.incrementar(g(2)'Access, 2);
-               aviso3.avisarme;
-               act.incrementar(g(3)'Access, 3);
-
-            elsif diferencia <= -2 then
-               PrintRT;
-               Text_IO.Put_Line("### DIFERENCIA MENOR QUE -2 # Diferencia: " & diferencia'Img);
-               aviso1.avisarme;
-               act.incrementar(g(1)'Access, 1);
-               aviso2.avisarme;
-               act.incrementar(g(2)'Access, 2);
-            elsif diferencia <= -1 then
-               PrintRT;
-               Text_IO.Put_Line("### DIFERENCIA MENOR QUE -1 # Diferencia: " & diferencia'Img);
-               aviso1.avisarme;
-               act.incrementar(g(1)'Access, 1);
-
-            else
-               aviso1.avisarme;
-               act.mantenerEstable(g(1)'Access, 1);
-               aviso2.avisarme;
-               act.mantenerEstable(g(2)'Access, 1);
-               aviso3.avisarme;
-               act.mantenerEstable(g(3)'Access, 1);
-            end if;
-         end;
+         if diferencia >= 3 then
+            PrintRT;
+            Text_IO.Put_Line("### DIFERENCIA MAYOR QUE 3 # Diferencia: " & diferencia'Img);
+            act.decrementar(g(1)'Access, 1);
+            aviso1.avisarme;
+            act.decrementar(g(2)'Access, 2);
+            aviso2.avisarme;
+            act.decrementar(g(3)'Access, 3);
+            aviso3.avisarme;
+         elsif diferencia >= 2 then
+            PrintRT;
+            Text_IO.Put_Line("### DIFERENCIA MAYOR QUE 2 # Diferencia: " & diferencia'Img);
+            act.decrementar(g(1)'Access, 1);
+            aviso1.avisarme;
+            act.decrementar(g(2)'Access, 2);
+            aviso2.avisarme;
+         elsif diferencia >= 1 then
+            PrintRT;
+            Text_IO.Put_Line("### DIFERENCIA MAYOR QUE 1 # Diferencia: " & diferencia'Img);
+            act.decrementar(g(1)'Access, 1);
+            aviso1.avisarme;
+         elsif diferencia <= -3 then
+            PrintRT;
+            Text_IO.Put_Line("### DIFERENCIA MENOR QUE -3 # Diferencia: " & diferencia'Img);
+            act.incrementar(g(1)'Access, 1);
+            aviso1.avisarme;
+            act.incrementar(g(2)'Access, 2);
+            aviso2.avisarme;
+            act.incrementar(g(3)'Access, 3);
+            aviso3.avisarme;
+         elsif diferencia <= -2 then
+            PrintRT;
+            Text_IO.Put_Line("### DIFERENCIA MENOR QUE -2 # Diferencia: " & diferencia'Img);
+            act.incrementar(g(1)'Access, 1);
+            aviso1.avisarme;
+            act.incrementar(g(2)'Access, 2);
+            aviso2.avisarme;
+         elsif diferencia <= -1 then
+            PrintRT;
+            Text_IO.Put_Line("### DIFERENCIA MENOR QUE -1 # Diferencia: " & diferencia'Img);
+            act.incrementar(g(1)'Access, 1);
+            aviso1.avisarme;
+         else
+            act.mantenerEstable(g(1)'Access, 1);
+            aviso1.avisarme;
+            act.mantenerEstable(g(2)'Access, 2);
+            aviso2.avisarme;
+            act.mantenerEstable(g(3)'Access, 3);
+            aviso3.avisarme;
+         end if;
+         delay until (timer);
+         timer := delayNormal + Clock;
       end loop;
    end tareaCoordinadora;
 
    --Tarea de la ciudad. Incrementa a razon de 6 segundos un consumo entre -3 y 3 en el actuador
    task type tareaCiudad (c : access ConsumoCiudad)
-   is --Parametros: Puntero al generador y el id del generador(1,2,3)
+   is
       private
    end tareaCiudad;
    task body tareaCiudad is
