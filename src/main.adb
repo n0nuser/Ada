@@ -46,8 +46,6 @@ procedure Main is
          select
             accept avisarme do
                begin
-                  --Text_IO.Put_Line("ME HA LLEGADO EL AVISARME GENERADOR " & id'Img);
-                  --act.mantenerEstable(g, id);
                   null;
                end;
             end avisarme;
@@ -78,7 +76,8 @@ procedure Main is
       aviso2 : tareaGenerador(g(2)'Access, 2);
       aviso3 : tareaGenerador(g(3)'Access, 3);
    begin
-      delay until (delayInicio + Clock);
+      timer := delayInicio + Clock;
+      delay until timer;
       timer := delayNormal + Clock;
       loop
          -- CONSULTA
@@ -98,7 +97,7 @@ procedure Main is
          porcentajeDiferencia := porcentajeProduccion - porcentajeConsumo;
 
          -- GESTION AUMENTO, DECREMENTO, ESTABILIZACION
-         Text_IO.Put_Line("");
+         Ada.Text_IO.New_Line;
          if porcentajeDiferencia > 5.0 then
             PrintRT;
             Text_IO.Put_Line("PELIGRO SOBRECARGA consumo:" & ConsumoGlobal'Img & " produccion:" & ProduccionGlobal'Img);
@@ -109,11 +108,8 @@ procedure Main is
             PrintRT;
             Text_IO.Put_Line("Estable consumo:" & ConsumoGlobal'Img & " produccion:" & ProduccionGlobal'Img);
          end if;
-         Text_IO.Put_Line("");
 
          if diferencia >= 3 then
-            PrintRT;
-            Text_IO.Put_Line("### DIFERENCIA MAYOR QUE 3 # Diferencia: " & diferencia'Img);
             act.decrementar(g(1)'Access, 1);
             aviso1.avisarme;
             act.decrementar(g(2)'Access, 2);
@@ -121,20 +117,14 @@ procedure Main is
             act.decrementar(g(3)'Access, 3);
             aviso3.avisarme;
          elsif diferencia >= 2 then
-            PrintRT;
-            Text_IO.Put_Line("### DIFERENCIA MAYOR QUE 2 # Diferencia: " & diferencia'Img);
             act.decrementar(g(1)'Access, 1);
             aviso1.avisarme;
             act.decrementar(g(2)'Access, 2);
             aviso2.avisarme;
          elsif diferencia >= 1 then
-            PrintRT;
-            Text_IO.Put_Line("### DIFERENCIA MAYOR QUE 1 # Diferencia: " & diferencia'Img);
             act.decrementar(g(1)'Access, 1);
             aviso1.avisarme;
          elsif diferencia <= -3 then
-            PrintRT;
-            Text_IO.Put_Line("### DIFERENCIA MENOR QUE -3 # Diferencia: " & diferencia'Img);
             act.incrementar(g(1)'Access, 1);
             aviso1.avisarme;
             act.incrementar(g(2)'Access, 2);
@@ -142,15 +132,11 @@ procedure Main is
             act.incrementar(g(3)'Access, 3);
             aviso3.avisarme;
          elsif diferencia <= -2 then
-            PrintRT;
-            Text_IO.Put_Line("### DIFERENCIA MENOR QUE -2 # Diferencia: " & diferencia'Img);
             act.incrementar(g(1)'Access, 1);
             aviso1.avisarme;
             act.incrementar(g(2)'Access, 2);
             aviso2.avisarme;
          elsif diferencia <= -1 then
-            PrintRT;
-            Text_IO.Put_Line("### DIFERENCIA MENOR QUE -1 # Diferencia: " & diferencia'Img);
             act.incrementar(g(1)'Access, 1);
             aviso1.avisarme;
          else
@@ -161,7 +147,7 @@ procedure Main is
             act.mantenerEstable(g(3)'Access, 3);
             aviso3.avisarme;
          end if;
-         delay until (timer);
+         delay until timer;
          timer := delayNormal + Clock;
       end loop;
    end tareaCoordinadora;
@@ -183,10 +169,7 @@ procedure Main is
       gs : aliased Generadores; --Iniciamos el array de generadores
       ciu : aliased ConsumoCiudad;
       mon : tareaCoordinadora(gs'Access, ciu'Access);
-      g1 : tareaGenerador(gs(1)'Access, 1); --Para cada generador iniciamos su correspondiente tarea
-      g2 : tareaGenerador(gs(2)'Access, 2);
-      g3 : tareaGenerador(gs(3)'Access, 3);
-      c  : tareaCiudad(ciu'Access); --Iniciamos la tarea que sube la produccion
+      c : tareaCiudad(ciu'Access); --Iniciamos la tarea que sube la produccion
    begin
       null;
    end inicio;
