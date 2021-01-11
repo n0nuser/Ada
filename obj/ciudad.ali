@@ -48,7 +48,7 @@ D a-tags.ads		20200228061810 edddc8f0 ada.tags%s
 D a-textio.ads		20200228061810 aef4d56d ada.text_io%s
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D ciudad.ads		20210109105116 5c0c2d17 ciudad%s
-D ciudad.adb		20210109105036 31a6dbf9 ciudad%b
+D ciudad.adb		20210109163430 31a6dbf9 ciudad%b
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
@@ -108,48 +108,48 @@ G c Z s s [consumociudadVDF ciudad 9 4 none]
 G c Z s s [consumociudadVIP ciudad 9 4 none]
 X 1 ada.ads
 16K9*Ada 20e8 14|1r6 2r6 2r39 3r6 7r32 13r38 18r23 19r30 19r57 20r18 15|1r6
-. 14r10 19r10 22r39 29r10
+. 13r10 18r10 21r39 28r10
 X 5 a-numeri.ads
 16K13*Numerics 32e17 14|3r10 7r36
 X 6 a-nudira.ads
 44k22*Discrete_Random 81e33 14|3w19 7r45
 50R9*Generator<30|63R9> 14|15r31[7]
-52V13*Random{integer} 15|26s34[14|7]
-61U14*Reset<30|100p14> 15|25s23[14|7]
+52V13*Random{integer} 15|25s34[14|7]
+61U14*Reset<30|100p14> 15|24s23[14|7]
 X 7 a-nudira.adb
 53V16 Random[30|83]{integer} 31|393b13[14|7]
 65V16 Random[30|83]{integer} 31|393b13[14|7]
 X 8 a-reatim.ads
-39K13*Real_Time 185e18 14|1w10 2r10 2r43 13r42 18r27 19r34 19r61 20r22 15|14r14
-. 19r14 22r43 29r14
+39K13*Real_Time 185e18 14|1w10 2r10 2r43 13r42 18r27 19r34 19r61 20r22 15|13r14
+. 18r14 21r43 28r14
 49O9*Time<duration> 14|20r32
 54O9*Time_Span<duration> 14|19r44
-61V13*Clock{49O9} 15|12s39 28s41
-67V14*"+"{49O9} 15|12s37 28s39
+61V13*Clock{49O9} 15|12s39 27s41
+67V14*"+"{49O9} 15|12s37 27s39
 122V13*Seconds{54O9} 14|19s71
 X 9 a-rttiev.ads
-38K23*Timing_Events 81e32 14|2w20 13r52 18r37 15|14r24 19r24 22r53 29r24
-40R9*Timing_Event<3|50R9> 75e14 14|13r66 18r51 15|22r67
-45U14*Set_Handler 15|14s38 19s38 29s38
+38K23*Timing_Events 81e32 14|2w20 13r52 18r37 15|13r24 18r24 21r53 28r24
+40R9*Timing_Event<3|50R9> 75e14 14|13r66 18r51 15|21r67
+45U14*Set_Handler 15|13s38 18s38 28s38
 X 12 a-textio.ads
 57K13*Text_IO 727e16 15|1w10
 X 14 ciudad.ads
-5K9*Ciudad 22l5 22e11 15|3b14 32l5 32t11
+5K9*Ciudad 22l5 22e11 15|3b14 31l5 31t11
 6I12*aleatorioConsumo{integer} 7r61 16r21
-7K12*AleatorioCon[6|44] 15r18 15|25r10 26r21
-9W19*ConsumoCiudad 15E7 21l8 21e21 15|4b19 31l8 31t21
+7K12*AleatorioCon[6|44] 15r18 15|24r10 25r21
+9W19*ConsumoCiudad 15E7 21l8 21e21 15|4b19 30l8 30t21
 10U17 leer 10<23 15|5b17 8l11 8t15
 10i23 temp{integer} 15|5b23 7m10
-11U17 abrirDispositivo 15|10b17 15l11 15t27
-12U17 cerrarDispositivo 15|17b17 20l11 20t28
-13U17 Timer 13=23 15|14r75 22b17 29r75 30l11 30t16
-13r23 event{9|40R9} 15|22b24
-15r7 seed{6|50R9[7]} 15|25r29 26r41
-16i7 tempCon{6I12} 15|26r10 27r31
-17i7 consumo{integer} 15|7r18 27r10 27r21
-18r7 jitterControl{9|40R9} 15|14r50 19r50 29r50
-19o7 periodoConsumo{8|54O9} 15|12r22 28r24
-20o7 nextTime{8|49O9} 15|12r10 14r65 19r65 28r10 29r65
+11U17 abrirDispositivo 15|10b17 14l11 14t27
+12U17 cerrarDispositivo 15|16b17 19l11 19t28
+13U17 Timer 13=23 15|13r75 21b17 28r75 29l11 29t16
+13r23 event{9|40R9} 15|21b24
+15r7 seed{6|50R9[7]} 15|24r29 25r41
+16i7 tempCon{6I12} 15|25r10 26r31
+17i7 consumo{integer} 15|7r18 26r10 26r21
+18r7 jitterControl{9|40R9} 15|13r50 18r50 28r50
+19o7 periodoConsumo{8|54O9} 15|12r22 27r24
+20o7 nextTime{8|49O9} 15|12r10 13r65 18r65 27r10 28r65
 X 16 interfac.ads
 74M9*Unsigned_32
 77M9*Unsigned_64

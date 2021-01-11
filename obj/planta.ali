@@ -52,7 +52,7 @@ D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
 D planta.ads		20210107122642 5b58d491 planta%s
-D planta.adb		20210109113846 7d11ffb4 planta%b
+D planta.adb		20210109163416 7d11ffb4 planta%b
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-crtl.ads		20200228061810 0ebbdb71 system.crtl%s
@@ -111,52 +111,52 @@ G c Z s s [generadorVDF planta 9 4 none]
 G c Z s s [generadorVIP planta 9 4 none]
 X 1 ada.ads
 16K9*Ada 20e8 18|1r6 2r6 2r39 3r6 7r29 14r38 19r28 20r33 20r60 21r18 19|1r6
-. 18r10 24r10 27r39 39r10
+. 17r10 23r10 26r39 38r10
 X 5 a-numeri.ads
 16K13*Numerics 32e17 18|3r10 7r33
 X 6 a-nudira.ads
 44k22*Discrete_Random 81e33 18|3w19 7r42
 50R9*Generator<30|63R9> 18|16r28[7]
-52V13*Random{integer} 19|30s28[18|7]
+52V13*Random{integer} 19|29s28[18|7]
 X 7 a-nudira.adb
 53V16 Random[30|83]{integer} 31|393b13[18|7]
 65V16 Random[30|83]{integer} 31|393b13[18|7]
 X 8 a-reatim.ads
-39K13*Real_Time 185e18 18|1w10 2r10 2r43 14r42 19r32 20r37 20r64 21r22 19|18r14
-. 24r14 27r43 39r14
+39K13*Real_Time 185e18 18|1w10 2r10 2r43 14r42 19r32 20r37 20r64 21r22 19|17r14
+. 23r14 26r43 38r14
 49O9*Time<duration> 18|21r32
 54O9*Time_Span<duration> 18|20r47
-61V13*Clock{49O9} 19|16s42 38s44
-67V14*"+"{49O9} 19|16s40 38s42
+61V13*Clock{49O9} 19|16s42 37s44
+67V14*"+"{49O9} 19|16s40 37s42
 122V13*Seconds{54O9} 18|20s74
 X 9 a-rttiev.ads
-38K23*Timing_Events 81e32 18|2w20 14r52 19r42 19|18r24 24r24 27r53 39r24
-40R9*Timing_Event<3|50R9> 75e14 18|14r66 19r56 19|27r67
-45U14*Set_Handler 19|18s38 24s38 39s38
+38K23*Timing_Events 81e32 18|2w20 14r52 19r42 19|17r24 23r24 26r53 38r24
+40R9*Timing_Event<3|50R9> 75e14 18|14r66 19r56 19|26r67
+45U14*Set_Handler 19|17s38 23s38 38s38
 X 12 a-textio.ads
 57K13*Text_IO 727e16 19|1w10
 X 14 interfac.ads
 74M9*Unsigned_32
 77M9*Unsigned_64
 X 18 planta.ads
-5K9*Planta 23l5 23e11 19|2b14 44l5 44t11
+5K9*Planta 23l5 23e11 19|2b14 43l5 43t11
 6I12*aleatorioProduccion{integer} 7r58 17r18
-7K12*Aleatorio[6|44] 16r18 19|30r18
-9W19*Generador 16E7 22l8 22e17 19|3b19 42l8 42t17
+7K12*Aleatorio[6|44] 16r18 19|29r18
+9W19*Generador 16E7 22l8 22e17 19|3b19 41l8 41t17
 10U17 leer 10<23 19|4b17 7l11 7t15
 10i23 temp{integer} 19|4b23 6m10
 11U17 incrementar 11>30 19|9b17 12l11 12t22
 11i30 incremento{integer} 19|9b30 11r37
-12U17 abrirDispositivo 19|14b17 19l11 19t27
-13U17 cerrarDispositivo 19|21b17 25l11 25t28
-14U17 Timer 14=23 19|18r80 27b17 39r80 40l11 40t16
-14r23 event{9|40R9} 19|27b24
-16r7 seed{6|50R9[7]} 19|30r35
-17i7 temp{6I12} 19|30r10 31r13 34r16
-18i7 produccion{integer} 19|6r18 11r10 11r24 32r13 32r27 35r13 35r27
-19r7 bajarJitterControl{9|40R9} 19|18r50 24r50 39r50
-20o7 periodoProduccion{8|54O9} 19|16r22 38r24
-21o7 nextTime{8|49O9} 19|16r10 18r70 24r70 38r10 39r70
+12U17 abrirDispositivo 19|14b17 18l11 18t27
+13U17 cerrarDispositivo 19|20b17 24l11 24t28
+14U17 Timer 14=23 19|17r80 26b17 38r80 39l11 39t16
+14r23 event{9|40R9} 19|26b24
+16r7 seed{6|50R9[7]} 19|29r35
+17i7 temp{6I12} 19|29r10 30r13 33r16
+18i7 produccion{integer} 19|6r18 11r10 11r24 31r13 31r27 34r13 34r27
+19r7 bajarJitterControl{9|40R9} 19|17r50 23r50 38r50
+20o7 periodoProduccion{8|54O9} 19|16r22 37r24
+21o7 nextTime{8|49O9} 19|16r10 17r70 23r70 37r10 38r70
 X 30 s-rannum.ads
 75V13*Random{14|74M9} 31|221i21
 76V13*Random{14|77M9} 31|221i21
