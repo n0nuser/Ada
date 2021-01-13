@@ -1,5 +1,13 @@
+-- Fichero: ActuadorEscritorP.adb
+-- Participantes
+-- Sergio Garcia Gonzalez - 70921911P
+-- Pablo Jesus Gonzalez Rubio - 70894492M
+
 package body ActuadorEscritorP is
    protected body ActuadorEscritorGen is
+
+      -- El actuador solo llama a las funciones de planta pero metiendole el retardo de 0.6
+
       procedure incrementar(g: access Generador;  id: Integer) is
       begin
          nextTime := Clock + salidaPeriodo;
@@ -17,7 +25,7 @@ package body ActuadorEscritorP is
          g.incrementar(-1);
       end decrementar;
 
-      procedure mantenerEstable(g: access Generador; id: Integer)  is
+      procedure mantenerEstable(g: access Generador; id: Integer) is
       begin
          nextTime := Clock + salidaPeriodo;
          Ada.Real_Time.Timing_Events.Set_Handler(salidaJitterControl, nextTime, Timer'Access); --Le mete un retardo de 0.6 segundos
@@ -25,7 +33,7 @@ package body ActuadorEscritorP is
          g.abrirDispositivo;
       end mantenerEstable;
 
-      procedure cerrarDispositivo(g: access Generador; id: Integer)  is
+      procedure cerrarDispositivo(g: access Generador; id: Integer) is
       begin
          nextTime := Clock + salidaPeriodo;
          Ada.Real_Time.Timing_Events.Set_Handler(salidaJitterControl, nextTime, Timer'Access); --Le mete un retardo de 0.6 segundos

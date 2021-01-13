@@ -37,7 +37,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#76163fc8#;
+   u00001 : constant Version_32 := 16#3140e8e8#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#67c8d842#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -493,7 +493,7 @@ package ada_main is
    pragma Export (C, u00227, "ciudadB");
    u00228 : constant Version_32 := 16#253b54a4#;
    pragma Export (C, u00228, "ciudadS");
-   u00229 : constant Version_32 := 16#708abe49#;
+   u00229 : constant Version_32 := 16#a91b93ca#;
    pragma Export (C, u00229, "sensorlectorpB");
    u00230 : constant Version_32 := 16#8f40c0cc#;
    pragma Export (C, u00230, "sensorlectorpS");

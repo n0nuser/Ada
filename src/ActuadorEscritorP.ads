@@ -1,3 +1,8 @@
+-- Fichero: ActuadorEscritorP.adb
+-- Participantes
+-- Sergio Garcia Gonzalez - 70921911P
+-- Pablo Jesus Gonzalez Rubio - 70894492M
+
 with System;
 with Ada.Real_Time;
 use Ada.Real_Time;

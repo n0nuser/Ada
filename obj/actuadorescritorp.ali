@@ -32,8 +32,8 @@ W system%s		system.ads		system.ali
 Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 W text_io%s		text_io.ads		text_io.ali
 
-D actuadorescritorp.ads	20210109105452 7cb95a84 actuadorescritorp%s
-D actuadorescritorp.adb	20210109111514 7e9fb9a8 actuadorescritorp%b
+D actuadorescritorp.ads	20210111103556 7cb95a84 actuadorescritorp%s
+D actuadorescritorp.adb	20210111103526 7e9fb9a8 actuadorescritorp%b
 D ada.ads		20200228061810 76789da1 ada%s
 D a-except.ads		20200228061810 a7106115 ada.exceptions%s
 D a-finali.ads		20200228061810 bf4f806b ada.finalization%s
@@ -50,7 +50,7 @@ D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
-D planta.ads		20210107122642 5b58d491 planta%s
+D planta.ads		20210111103516 5b58d491 planta%s
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-crtl.ads		20200228061810 0ebbdb71 system.crtl%s
@@ -78,80 +78,80 @@ D s-wchcon.ads		20200228061810 1b7d22d2 system.wch_con%s
 D s-win32.ads		20200228061810 15ac53fb system.win32%s
 D text_io.ads		20200228061810 21b2c898 text_io%s
 G a e
-G c Z s b [incrementar actuadorescritorp__actuadorescritorgen 13 17 none]
-G c Z s b [decrementar actuadorescritorp__actuadorescritorgen 14 17 none]
-G c Z s b [mantenerestable actuadorescritorp__actuadorescritorgen 15 17 none]
-G c Z s b [cerrardispositivo actuadorescritorp__actuadorescritorgen 16 17 none]
-G c Z s b [timer actuadorescritorp__actuadorescritorgen 17 17 none]
-G c Z s b [actuadorescritorgen__incrementarN actuadorescritorp 13 7 none]
-G c Z s b [actuadorescritorgen__incrementarP actuadorescritorp 13 7 none]
-G c Z s b [actuadorescritorgen__decrementarN actuadorescritorp 14 7 none]
-G c Z s b [actuadorescritorgen__decrementarP actuadorescritorp 14 7 none]
-G c Z s b [actuadorescritorgen__mantenerestableN actuadorescritorp 15 7 none]
-G c Z s b [actuadorescritorgen__mantenerestableP actuadorescritorp 15 7 none]
-G c Z s b [actuadorescritorgen__cerrardispositivoN actuadorescritorp 16 7 none]
-G c Z s b [actuadorescritorgen__cerrardispositivoP actuadorescritorp 16 7 none]
-G c Z s b [actuadorescritorgen__timerN actuadorescritorp 17 7 none]
-G c Z s b [actuadorescritorgen__timerP actuadorescritorp 17 7 none]
-G c Z s s [actuadorescritorgenVDI actuadorescritorp 11 4 none]
-G c Z s s [actuadorescritorgenVDF actuadorescritorp 11 4 none]
-G c Z s s [actuadorescritorgenVIP actuadorescritorp 11 4 none]
-G r p none [incrementar actuadorescritorp__actuadorescritorgen 13 17 none] [incrementar planta__generador 11 17 none]
-G r p none [decrementar actuadorescritorp__actuadorescritorgen 14 17 none] [incrementar planta__generador 11 17 none]
-G r p none [mantenerestable actuadorescritorp__actuadorescritorgen 15 17 none] [abrirdispositivo planta__generador 12 17 none]
-G r p none [cerrardispositivo actuadorescritorp__actuadorescritorgen 16 17 none] [cerrardispositivo planta__generador 13 17 none]
+G c Z s b [incrementar actuadorescritorp__actuadorescritorgen 18 17 none]
+G c Z s b [decrementar actuadorescritorp__actuadorescritorgen 19 17 none]
+G c Z s b [mantenerestable actuadorescritorp__actuadorescritorgen 20 17 none]
+G c Z s b [cerrardispositivo actuadorescritorp__actuadorescritorgen 21 17 none]
+G c Z s b [timer actuadorescritorp__actuadorescritorgen 22 17 none]
+G c Z s b [actuadorescritorgen__incrementarN actuadorescritorp 18 7 none]
+G c Z s b [actuadorescritorgen__incrementarP actuadorescritorp 18 7 none]
+G c Z s b [actuadorescritorgen__decrementarN actuadorescritorp 19 7 none]
+G c Z s b [actuadorescritorgen__decrementarP actuadorescritorp 19 7 none]
+G c Z s b [actuadorescritorgen__mantenerestableN actuadorescritorp 20 7 none]
+G c Z s b [actuadorescritorgen__mantenerestableP actuadorescritorp 20 7 none]
+G c Z s b [actuadorescritorgen__cerrardispositivoN actuadorescritorp 21 7 none]
+G c Z s b [actuadorescritorgen__cerrardispositivoP actuadorescritorp 21 7 none]
+G c Z s b [actuadorescritorgen__timerN actuadorescritorp 22 7 none]
+G c Z s b [actuadorescritorgen__timerP actuadorescritorp 22 7 none]
+G c Z s s [actuadorescritorgenVDI actuadorescritorp 16 4 none]
+G c Z s s [actuadorescritorgenVDF actuadorescritorp 16 4 none]
+G c Z s s [actuadorescritorgenVIP actuadorescritorp 16 4 none]
+G r p none [incrementar actuadorescritorp__actuadorescritorgen 18 17 none] [incrementar planta__generador 16 17 none]
+G r p none [decrementar actuadorescritorp__actuadorescritorgen 19 17 none] [incrementar planta__generador 16 17 none]
+G r p none [mantenerestable actuadorescritorp__actuadorescritorgen 20 17 none] [abrirdispositivo planta__generador 17 17 none]
+G r p none [cerrardispositivo actuadorescritorp__actuadorescritorgen 21 17 none] [cerrardispositivo planta__generador 18 17 none]
 X 1 actuadorescritorp.ads
-9K9*ActuadorEscritorP 25l5 25e22 2|1b14 43l5 43t22
-10I9*ActuadorDato<integer> 20r19
-11W19*ActuadorEscritorGen 19E7 24l8 24e27 2|2b19 41l8 41t27
-13U17 incrementar 13^29 13>50 2|3b17 9l11 9t22
-13p29 g(19|9W19) 2|3b29 8r10
-13i50 id{integer} 2|3b51
-14U17 decrementar 14^29 14>50 2|11b17 18l11 18t22
-14p29 g(19|9W19) 2|11b29 17r10
-14i50 id{integer} 2|11b51
-15U17 mantenerEstable 15^33 15>54 2|20b17 26l11 26t26
-15p33 g(19|9W19) 2|20b33 25r10
-15i54 id{integer} 2|20b54
-16U17 cerrarDispositivo 16^35 16>56 2|28b17 34l11 34t28
-16p35 g(19|9W19) 2|28b35 33r10
-16i56 id{integer} 2|28b56
-17U17 Timer 17=23 2|6r81 14r81 23r81 31r81 36b17 39r81 40l11 40t16
-17r23 event{10|40R9} 2|36b23
-19o7 nextTime{9|49O9} 2|5r10 6r71 13r10 14r71 22r10 23r71 30r10 31r71 38r10
-. 38r22 39r71
-20i7 escribiendo{10I9}
-21r7 salidaJitterControl{10|40R9} 2|6r50 14r50 23r50 31r50 39r50
-22o7 salidaPeriodo{9|54O9} 2|5r30 13r30 22r30 30r30 38r31
+14K9*ActuadorEscritorP 30l5 30e22 2|6b14 51l5 51t22
+15I9*ActuadorDato<integer> 25r19
+16W19*ActuadorEscritorGen 24E7 29l8 29e27 2|7b19 49l8 49t27
+18U17 incrementar 18^29 18>50 2|11b17 17l11 17t22
+18p29 g(19|14W19) 2|11b29 16r10
+18i50 id{integer} 2|11b51
+19U17 decrementar 19^29 19>50 2|19b17 26l11 26t22
+19p29 g(19|14W19) 2|19b29 25r10
+19i50 id{integer} 2|19b51
+20U17 mantenerEstable 20^33 20>54 2|28b17 34l11 34t26
+20p33 g(19|14W19) 2|28b33 33r10
+20i54 id{integer} 2|28b54
+21U17 cerrarDispositivo 21^35 21>56 2|36b17 42l11 42t28
+21p35 g(19|14W19) 2|36b35 41r10
+21i56 id{integer} 2|36b56
+22U17 Timer 22=23 2|14r81 22r81 31r81 39r81 44b17 47r81 48l11 48t16
+22r23 event{10|40R9} 2|44b23
+24o7 nextTime{9|49O9} 2|13r10 14r71 21r10 22r71 30r10 31r71 38r10 39r71 46r10
+. 46r22 47r71
+25i7 escribiendo{15I9}
+26r7 salidaJitterControl{10|40R9} 2|14r50 22r50 31r50 39r50 47r50
+27o7 salidaPeriodo{9|54O9} 2|13r30 21r30 30r30 38r30 46r31
 X 3 ada.ads
-16K9*Ada 1|2r6 3r5 4r6 5r5 17r37 19r16 21r27 22r21 22r46 2|6r10 14r10 23r10
-. 31r10 36r36 39r10 3|20e8
+16K9*Ada 1|7r6 8r5 9r6 10r5 22r37 24r16 26r27 27r21 27r46 2|14r10 22r10 31r10
+. 39r10 44r36 47r10 3|20e8
 X 9 a-reatim.ads
-39K13*Real_Time 1|2w10 3r9 4r10 5r9 17r41 19r20 21r31 22r25 22r50 2|6r14
-. 14r14 23r14 31r14 36r40 39r14 9|185e18
-49O9*Time<duration> 1|19r30
-54O9*Time_Span<duration> 1|22r35
-61V13*Clock{49O9} 2|5s22 13s22 22s22 30s22
-65V14*"+"{49O9} 2|5s28 13s28 22s28 30s28 38s30
-119V13*Milliseconds{54O9} 1|22s60
+39K13*Real_Time 1|7w10 8r9 9r10 10r9 22r41 24r20 26r31 27r25 27r50 2|14r14
+. 22r14 31r14 39r14 44r40 47r14 9|185e18
+49O9*Time<duration> 1|24r30
+54O9*Time_Span<duration> 1|27r35
+61V13*Clock{49O9} 2|13s22 21s22 30s22 38s22
+65V14*"+"{49O9} 2|13s28 21s28 30s28 38s28 46s30
+119V13*Milliseconds{54O9} 1|27s60
 X 10 a-rttiev.ads
-38K23*Timing_Events 1|4w20 17r51 21r41 2|6r24 14r24 23r24 31r24 36r50 39r24
+38K23*Timing_Events 1|9w20 22r51 26r41 2|14r24 22r24 31r24 39r24 44r50 47r24
 . 10|81e32
-40R9*Timing_Event<5|50R9> 1|17r65 21r55 2|36r64 10|75e14
-45U14*Set_Handler 2|6s38 14s38 23s38 31s38 39s38
+40R9*Timing_Event<5|50R9> 1|22r65 26r55 2|44r64 10|75e14
+45U14*Set_Handler 2|14s38 22s38 31s38 39s38 47s38
 X 19 planta.ads
-5K9*Planta 1|7w6 7r18 19|23e11
-9W19*Generador 1|13r39 14r39 15r43 16r45 2|3r39 11r39 20r43 28r45 19|22e17
-11U17 incrementar 2|8s12 17s12
-12U17 abrirDispositivo 2|25s12
-13U17 cerrarDispositivo 2|33s12
+10K9*Planta 1|12w6 12r18 19|28e11
+14W19*Generador 1|18r39 19r39 20r43 21r45 2|11r39 19r39 28r43 36r45 19|27e17
+16U17 incrementar 2|16s12 25s12
+17U17 abrirDispositivo 2|33s12
+18U17 cerrarDispositivo 2|41s12
 X 20 system.ads
-37K9*System 1|1w6 12r33 20|200e11
+37K9*System 1|6w6 17r33 20|200e11
 100I12*Any_Priority{integer}
-102I12*Interrupt_Priority{100I12} 1|12r40
+102I12*Interrupt_Priority{100I12} 1|17r40
 X 33 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
 X 45 text_io.ads
-24K9*Text_IO=24:29 1|6w6
+24K9*Text_IO=24:29 1|11w6
 

@@ -1,3 +1,8 @@
+-- Fichero: SensorLectorP.ads
+-- Participantes
+-- Sergio Garcia Gonzalez - 70921911P
+-- Pablo Jesus Gonzalez Rubio - 70894492M
+
 with System;
 with Ada.Real_Time;               use Ada.Real_Time;
 with Ada.Real_Time.Timing_Events; use Ada.Real_Time;
