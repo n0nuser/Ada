@@ -1,3 +1,8 @@
+-- Fichero: main.adb
+-- Participantes
+-- Sergio Garcia Gonzalez - 70921911P
+-- Pablo Jesus Gonzalez Rubio - 70894492M
+
 with Text_IO;
 with Ada.Text_IO;
 with Ada.Real_Time;
@@ -17,15 +22,13 @@ procedure Main is
    Produccion3 : Integer := 15;
    ConsumoGlobal : Integer := 35;
 
-   type Generadores is array(1 .. 3) of aliased Generador; -- Array con objecto generador(esta en Planta). Contiene la produccion
+   type Generadores is array(1 .. 3) of aliased Generador; -- Array con objeto Generador(esta en Planta)
 
-   procedure PrintRT is
+   procedure PrintRT is --Al llamar a la función se imprime el tiempo actual
       The_Clock : Ada.Real_Time.Time := Ada.Real_Time.Clock;
 
-      -- Convert to Time_Span
       As_Time_Span : Ada.Real_Time.Time_Span := The_Clock - Time_Of(0, Time_Span_Zero);
 
-      -- Epoch ?
       Epoch : constant Ada.Calendar.Time := Ada.Calendar.Time_Of(1970, 01, 01);
 
       Dur : Duration := Ada.Real_Time.To_Duration(As_Time_Span);
@@ -62,25 +65,28 @@ procedure Main is
       private
    end tareaCoordinadora;
    task body tareaCoordinadora is
-      delayInicio : Duration := 0.3; -- Esperamos 0.3 segundos antes de empezar la tarea coordinadora
-      delayNormal : Duration := 1.0; -- Esperamos 0.3 segundos antes de empezar la tarea coordinadora
-      act : aliased ActuadorEscritorGen;
-      sen : aliased SensorLectorGen; --Punteros a sensorLector y actuadorEscritor para usar sus funciones
+      delayInicio : Duration := 0.3;
+      delayNormal : Duration := 1.0;
+      timer : Ada.Calendar.Time;
+
+      act : aliased ActuadorEscritorGen; --Punteros a sensorLector y actuadorEscritor para usar sus funciones
+      sen : aliased SensorLectorGen;
+
       diferencia : Integer;
       porcentajeProduccion : Float;
       porcentajeConsumo : Float;
       porcentajeDiferencia : Float;
       ProduccionGlobal : Integer := 0;
-      timer : Ada.Calendar.Time;
+
       aviso1 : tareaGenerador(g(1)'Access, 1);
       aviso2 : tareaGenerador(g(2)'Access, 2);
       aviso3 : tareaGenerador(g(3)'Access, 3);
    begin
-      timer := delayInicio + Clock;
+      timer := delayInicio + Clock; --0.3 segundos al inicio
       delay until timer;
-      timer := delayNormal + Clock;
+      timer := delayNormal + Clock; --1.0 segundos de muestreo
       loop
-         -- CONSULTA
+         -- Consulta de valores de produccion
          sen.leer(g(1)'Access, Produccion1);
          aviso1.avisarme;
          sen.leer(g(2)'Access, Produccion2);
@@ -88,15 +94,17 @@ procedure Main is
          sen.leer(g(3)'Access, Produccion3);
          aviso3.avisarme;
 
+         -- Lectura instantanea al consumo de la ciudad
          c.leer(consumoGlobal);
 
+         -- Gestion comprobacion valores produccion-consumo
          ProduccionGlobal := Produccion1 + Produccion2 + Produccion3;
          diferencia := ProduccionGlobal - consumoGlobal;
          porcentajeProduccion := (100.0 * Float(ProduccionGlobal)) / 90.0;
          porcentajeConsumo := (100.0 * Float(ConsumoGlobal)) / 90.0;
          porcentajeDiferencia := porcentajeProduccion - porcentajeConsumo;
 
-         -- GESTION AUMENTO, DECREMENTO, ESTABILIZACION
+         -- Hace comprobacion de porcentajes
          Ada.Text_IO.New_Line;
          if porcentajeDiferencia > 5.0 then
             PrintRT;
@@ -109,7 +117,8 @@ procedure Main is
             Text_IO.Put_Line("Estable consumo:" & ConsumoGlobal'Img & " produccion:" & ProduccionGlobal'Img);
          end if;
 
-         if diferencia >= 3 then
+         -- Hace comprobacion de diferencia
+         if diferencia >= 3 then -- Incrementa
             act.decrementar(g(1)'Access, 1);
             aviso1.avisarme;
             act.decrementar(g(2)'Access, 2);
@@ -124,7 +133,7 @@ procedure Main is
          elsif diferencia >= 1 then
             act.decrementar(g(1)'Access, 1);
             aviso1.avisarme;
-         elsif diferencia <= -3 then
+         elsif diferencia <= -3 then -- Decrementa
             act.incrementar(g(1)'Access, 1);
             aviso1.avisarme;
             act.incrementar(g(2)'Access, 2);
@@ -139,7 +148,7 @@ procedure Main is
          elsif diferencia <= -1 then
             act.incrementar(g(1)'Access, 1);
             aviso1.avisarme;
-         else
+         else -- Mantiene Estable
             act.mantenerEstable(g(1)'Access, 1);
             aviso1.avisarme;
             act.mantenerEstable(g(2)'Access, 2);
@@ -152,16 +161,15 @@ procedure Main is
       end loop;
    end tareaCoordinadora;
 
-   --Tarea de la ciudad. Incrementa a razon de 6 segundos un consumo entre -3 y 3 en el actuador
    task type tareaCiudad (c : access ConsumoCiudad)
    is
       private
    end tareaCiudad;
    task body tareaCiudad is
    begin
-      c.abrirDispositivo;
+      c.abrirDispositivo; -- Activa el Timer de ciudad y empieza a consumir
       if ConsumoGlobal < 15 or ConsumoGlobal > 90 then
-         c.cerrarDispositivo;
+         c.cerrarDispositivo; -- Lo cierra y queda estable
       end if;
    end tareaCiudad;
 

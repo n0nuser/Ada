@@ -15,7 +15,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV MAX_PROTECTED_ENTRIES=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U sensorlectorp%b	sensorlectorp.adb	708abe49 NE OO PK
+U sensorlectorp%b	sensorlectorp.adb	a91b93ca NE OO PK
 Z ada.tags%s		a-tags.adb		a-tags.ali
 Z system%s		system.ads		system.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
@@ -51,9 +51,9 @@ D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
-D planta.ads		20210107122642 5b58d491 planta%s
-D sensorlectorp.ads	20210107110812 e7b9fbbd sensorlectorp%s
-D sensorlectorp.adb	20210107110944 973345f4 sensorlectorp%b
+D planta.ads		20210111103516 5b58d491 planta%s
+D sensorlectorp.ads	20210111103612 e7b9fbbd sensorlectorp%s
+D sensorlectorp.adb	20210111103458 4ea26877 sensorlectorp%b
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-crtl.ads		20200228061810 0ebbdb71 system.crtl%s
@@ -83,55 +83,56 @@ D s-wchcon.ads		20200228061810 1b7d22d2 system.wch_con%s
 D s-win32.ads		20200228061810 15ac53fb system.win32%s
 D text_io.ads		20200228061810 21b2c898 text_io%s
 G a e
-G c Z s b [leer sensorlectorp__sensorlectorgen 11 13 none]
-G c Z s b [timer sensorlectorp__sensorlectorgen 12 17 none]
-G c Z s b [sensorlectorgen__timerN sensorlectorp 12 7 none]
-G c Z s b [sensorlectorgen__timerP sensorlectorp 12 7 none]
-G c Z s s [sensorlectorgenVDI sensorlectorp 9 4 none]
-G c Z s s [sensorlectorgenVDF sensorlectorp 9 4 none]
-G c Z s s [sensorlectorgenVIP sensorlectorp 9 4 none]
-G c Z s s [P5sIP sensorlectorp 11 7 none]
-G r p none [leer sensorlectorp__sensorlectorgen 11 13 none] [leer planta__generador 10 17 none]
+G c Z s b [leer sensorlectorp__sensorlectorgen 16 13 none]
+G c Z s b [timer sensorlectorp__sensorlectorgen 17 17 none]
+G c Z s b [sensorlectorgen__timerN sensorlectorp 17 7 none]
+G c Z s b [sensorlectorgen__timerP sensorlectorp 17 7 none]
+G c Z s s [sensorlectorgenVDI sensorlectorp 14 4 none]
+G c Z s s [sensorlectorgenVDF sensorlectorp 14 4 none]
+G c Z s s [sensorlectorgenVIP sensorlectorp 14 4 none]
+G c Z s s [P5sIP sensorlectorp 16 7 none]
+G r p none [leer sensorlectorp__sensorlectorgen 16 13 none] [leer planta__generador 15 17 none]
 X 1 ada.ads
-16K9*Ada 20e8 18|2r6 2r39 3r6 3r39 12r38 14r30 15r30 16r24 16r51 19|9r39
-. 14r10
+16K9*Ada 20e8 18|7r6 7r39 8r6 8r39 17r38 19r30 20r30 21r24 21r51 19|14r10
+. 18r39 23r10
 X 7 a-reatim.ads
-39K13*Real_Time 185e18 18|2w10 2r43 3r10 3r43 12r42 14r34 15r34 16r28 16r55
-. 19|9r43 14r14
-49O9*Time<duration> 18|14r44
-54O9*Time_Span<duration> 18|16r38
-65V14*"+"{49O9} 19|13s37
-119V13*Milliseconds{54O9} 18|16s65
+39K13*Real_Time 185e18 18|7w10 7r43 8r10 8r43 17r42 19r34 20r34 21r28 21r55
+. 19|14r14 18r43 23r14
+49O9*Time<duration> 18|19r44
+54O9*Time_Span<duration> 18|21r38
+61V13*Clock{49O9} 19|13s22
+65V14*"+"{49O9} 19|13s28 22s37
+119V13*Milliseconds{54O9} 18|21s65
 X 8 a-rttiev.ads
-38K23*Timing_Events 81e32 18|3w20 12r52 15r44 19|9r53 14r24
-40R9*Timing_Event<3|50R9> 75e14 18|12r66 15r58 19|9r67
-45U14*Set_Handler 19|14s38
+38K23*Timing_Events 81e32 18|8w20 17r52 20r44 19|14r24 18r53 23r24
+40R9*Timing_Event<3|50R9> 75e14 18|17r66 20r58 19|18r67
+45U14*Set_Handler 19|14s38 23s38
 X 17 planta.ads
-5K9*Planta 23e11 18|5w6 5r39
-9W19*Generador 22e17 18|11r30 19|4r30
-10U17 leer 19|6s12
+10K9*Planta 28e11 18|10w6 10r39
+14W19*Generador 27e17 18|16r30 19|11r30
+15U17 leer 19|15s12
 X 18 sensorlectorp.ads
-7K9*SensorLectorP 18l5 18e18 19|1b14 18l5 18t18
-8I9*SensorDato<integer>
-9W19*SensorLectorGen 14E7 17l8 17e23 19|2b19 17l8 17t23
-11Y13 leer 11^19 11<41 19|4b13 7l11 7t15
-11p19 g(17|9W19) 19|6r10
-11i41 result{integer} 19|6m17
-12U17 Timer 12=23 19|9b17 14r82 15l11 15t16
-12r23 event{8|40R9} 19|9b24
-14o7 nextTime{7|49O9} 19|13r10 13r28 14r72
-15r7 entradaJitterControl{8|40R9} 19|14r50
-16o7 entradaPeriodo{7|54O9} 19|13r39
+12K9*SensorLectorP 23l5 23e18 19|6b14 27l5 27t18
+13I9*SensorDato<integer>
+14W19*SensorLectorGen 19E7 22l8 22e23 19|7b19 26l8 26t23
+16Y13 leer 16^19 16<41 19|11b13 16l11 16t15
+16p19 g(17|14W19) 19|15r10
+16i41 result{integer} 19|15m17
+17U17 Timer 17=23 19|14r82 18b17 23r82 24l11 24t16
+17r23 event{8|40R9} 19|18b24
+19o7 nextTime{7|49O9} 19|13r10 14r72 22r10 22r28 23r72
+20r7 entradaJitterControl{8|40R9} 19|14r50 23r50
+21o7 entradaPeriodo{7|54O9} 19|13r30 22r39
 X 19 sensorlectorp.adb
-4p19 g(17|9W19)
-4i41 result{integer}
+11p19 g(17|14W19)
+11i41 result{integer}
 X 20 system.ads
-37K9*System 18|1w6 10r34 20|200e11
+37K9*System 18|6w6 15r34 20|200e11
 100I12*Any_Priority{integer}
-102I12*Interrupt_Priority{100I12} 18|10r41
+102I12*Interrupt_Priority{100I12} 18|15r41
 X 33 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
 X 47 text_io.ads
-24K9*Text_IO=24:29 18|4w6
+24K9*Text_IO=24:29 18|9w6
 

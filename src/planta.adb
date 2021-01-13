@@ -1,3 +1,8 @@
+-- Fichero: planta.adb
+-- Participantes
+-- Sergio Garcia Gonzalez - 70921911P
+-- Pablo Jesus Gonzalez Rubio - 70894492M
+
 with Ada.Text_IO;
 package body Planta is
    protected body Generador is

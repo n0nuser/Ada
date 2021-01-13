@@ -47,8 +47,8 @@ D a-stream.ads		20200228061810 119b8fb3 ada.streams%s
 D a-tags.ads		20200228061810 edddc8f0 ada.tags%s
 D a-textio.ads		20200228061810 aef4d56d ada.text_io%s
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
-D ciudad.ads		20210109105116 5c0c2d17 ciudad%s
-D ciudad.adb		20210109163430 31a6dbf9 ciudad%b
+D ciudad.ads		20210111103546 5c0c2d17 ciudad%s
+D ciudad.adb		20210111103534 31a6dbf9 ciudad%b
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
@@ -83,73 +83,73 @@ D s-valuns.ads		20200228061810 35067db9 system.val_uns%s
 D s-wchcon.ads		20200228061810 1b7d22d2 system.wch_con%s
 D s-win32.ads		20200228061810 15ac53fb system.win32%s
 G a e
-G c Z s s [random ciudad__aleatoriocon 52 13 7_4]
-G c Z s s [random ciudad__aleatoriocon 54 13 7_4]
-G c Z s s [reset ciudad__aleatoriocon 60 14 7_4]
-G c Z s s [reset ciudad__aleatoriocon 61 14 7_4]
-G c Z s s [save ciudad__aleatoriocon 67 14 7_4]
-G c Z s s [reset ciudad__aleatoriocon 68 14 7_4]
-G c Z s s [image ciudad__aleatoriocon 72 13 7_4]
-G c Z s s [value ciudad__aleatoriocon 73 13 7_4]
-G c Z s b [leer ciudad__consumociudad 10 17 none]
-G c Z s b [abrirdispositivo ciudad__consumociudad 11 17 none]
-G c Z s b [cerrardispositivo ciudad__consumociudad 12 17 none]
-G c Z s b [timer ciudad__consumociudad 13 17 none]
-G c Z s b [consumociudad__leerN ciudad 10 7 none]
-G c Z s b [consumociudad__leerP ciudad 10 7 none]
-G c Z s b [consumociudad__abrirdispositivoN ciudad 11 7 none]
-G c Z s b [consumociudad__abrirdispositivoP ciudad 11 7 none]
-G c Z s b [consumociudad__cerrardispositivoN ciudad 12 7 none]
-G c Z s b [consumociudad__cerrardispositivoP ciudad 12 7 none]
-G c Z s b [consumociudad__timerN ciudad 13 7 none]
-G c Z s b [consumociudad__timerP ciudad 13 7 none]
-G c Z s s [consumociudadVDI ciudad 9 4 none]
-G c Z s s [consumociudadVDF ciudad 9 4 none]
-G c Z s s [consumociudadVIP ciudad 9 4 none]
+G c Z s s [random ciudad__aleatoriocon 52 13 12_4]
+G c Z s s [random ciudad__aleatoriocon 54 13 12_4]
+G c Z s s [reset ciudad__aleatoriocon 60 14 12_4]
+G c Z s s [reset ciudad__aleatoriocon 61 14 12_4]
+G c Z s s [save ciudad__aleatoriocon 67 14 12_4]
+G c Z s s [reset ciudad__aleatoriocon 68 14 12_4]
+G c Z s s [image ciudad__aleatoriocon 72 13 12_4]
+G c Z s s [value ciudad__aleatoriocon 73 13 12_4]
+G c Z s b [leer ciudad__consumociudad 15 17 none]
+G c Z s b [abrirdispositivo ciudad__consumociudad 16 17 none]
+G c Z s b [cerrardispositivo ciudad__consumociudad 17 17 none]
+G c Z s b [timer ciudad__consumociudad 18 17 none]
+G c Z s b [consumociudad__leerN ciudad 15 7 none]
+G c Z s b [consumociudad__leerP ciudad 15 7 none]
+G c Z s b [consumociudad__abrirdispositivoN ciudad 16 7 none]
+G c Z s b [consumociudad__abrirdispositivoP ciudad 16 7 none]
+G c Z s b [consumociudad__cerrardispositivoN ciudad 17 7 none]
+G c Z s b [consumociudad__cerrardispositivoP ciudad 17 7 none]
+G c Z s b [consumociudad__timerN ciudad 18 7 none]
+G c Z s b [consumociudad__timerP ciudad 18 7 none]
+G c Z s s [consumociudadVDI ciudad 14 4 none]
+G c Z s s [consumociudadVDF ciudad 14 4 none]
+G c Z s s [consumociudadVIP ciudad 14 4 none]
 X 1 ada.ads
-16K9*Ada 20e8 14|1r6 2r6 2r39 3r6 7r32 13r38 18r23 19r30 19r57 20r18 15|1r6
-. 13r10 18r10 21r39 28r10
+16K9*Ada 20e8 14|6r6 7r6 7r39 8r6 12r32 18r38 23r23 24r30 24r57 25r18 15|6r6
+. 18r10 23r10 26r39 33r10
 X 5 a-numeri.ads
-16K13*Numerics 32e17 14|3r10 7r36
+16K13*Numerics 32e17 14|8r10 12r36
 X 6 a-nudira.ads
-44k22*Discrete_Random 81e33 14|3w19 7r45
-50R9*Generator<30|63R9> 14|15r31[7]
-52V13*Random{integer} 15|25s34[14|7]
-61U14*Reset<30|100p14> 15|24s23[14|7]
+44k22*Discrete_Random 81e33 14|8w19 12r45
+50R9*Generator<30|63R9> 14|20r31[12]
+52V13*Random{integer} 15|30s34[14|12]
+61U14*Reset<30|100p14> 15|29s23[14|12]
 X 7 a-nudira.adb
-53V16 Random[30|83]{integer} 31|393b13[14|7]
-65V16 Random[30|83]{integer} 31|393b13[14|7]
+53V16 Random[30|83]{integer} 31|393b13[14|12]
+65V16 Random[30|83]{integer} 31|393b13[14|12]
 X 8 a-reatim.ads
-39K13*Real_Time 185e18 14|1w10 2r10 2r43 13r42 18r27 19r34 19r61 20r22 15|13r14
-. 18r14 21r43 28r14
-49O9*Time<duration> 14|20r32
-54O9*Time_Span<duration> 14|19r44
-61V13*Clock{49O9} 15|12s39 27s41
-67V14*"+"{49O9} 15|12s37 27s39
-122V13*Seconds{54O9} 14|19s71
+39K13*Real_Time 185e18 14|6w10 7r10 7r43 18r42 23r27 24r34 24r61 25r22 15|18r14
+. 23r14 26r43 33r14
+49O9*Time<duration> 14|25r32
+54O9*Time_Span<duration> 14|24r44
+61V13*Clock{49O9} 15|17s39 32s41
+67V14*"+"{49O9} 15|17s37 32s39
+122V13*Seconds{54O9} 14|24s71
 X 9 a-rttiev.ads
-38K23*Timing_Events 81e32 14|2w20 13r52 18r37 15|13r24 18r24 21r53 28r24
-40R9*Timing_Event<3|50R9> 75e14 14|13r66 18r51 15|21r67
-45U14*Set_Handler 15|13s38 18s38 28s38
+38K23*Timing_Events 81e32 14|7w20 18r52 23r37 15|18r24 23r24 26r53 33r24
+40R9*Timing_Event<3|50R9> 75e14 14|18r66 23r51 15|26r67
+45U14*Set_Handler 15|18s38 23s38 33s38
 X 12 a-textio.ads
-57K13*Text_IO 727e16 15|1w10
+57K13*Text_IO 727e16 15|6w10
 X 14 ciudad.ads
-5K9*Ciudad 22l5 22e11 15|3b14 31l5 31t11
-6I12*aleatorioConsumo{integer} 7r61 16r21
-7K12*AleatorioCon[6|44] 15r18 15|24r10 25r21
-9W19*ConsumoCiudad 15E7 21l8 21e21 15|4b19 30l8 30t21
-10U17 leer 10<23 15|5b17 8l11 8t15
-10i23 temp{integer} 15|5b23 7m10
-11U17 abrirDispositivo 15|10b17 14l11 14t27
-12U17 cerrarDispositivo 15|16b17 19l11 19t28
-13U17 Timer 13=23 15|13r75 21b17 28r75 29l11 29t16
-13r23 event{9|40R9} 15|21b24
-15r7 seed{6|50R9[7]} 15|24r29 25r41
-16i7 tempCon{6I12} 15|25r10 26r31
-17i7 consumo{integer} 15|7r18 26r10 26r21
-18r7 jitterControl{9|40R9} 15|13r50 18r50 28r50
-19o7 periodoConsumo{8|54O9} 15|12r22 27r24
-20o7 nextTime{8|49O9} 15|12r10 13r65 18r65 27r10 28r65
+10K9*Ciudad 27l5 27e11 15|8b14 36l5 36t11
+11I12*aleatorioConsumo{integer} 12r61 21r21
+12K12*AleatorioCon[6|44] 20r18 15|29r10 30r21
+14W19*ConsumoCiudad 20E7 26l8 26e21 15|9b19 35l8 35t21
+15U17 leer 15<23 15|10b17 13l11 13t15
+15i23 temp{integer} 15|10b23 12m10
+16U17 abrirDispositivo 15|15b17 19l11 19t27
+17U17 cerrarDispositivo 15|21b17 24l11 24t28
+18U17 Timer 18=23 15|18r75 26b17 33r75 34l11 34t16
+18r23 event{9|40R9} 15|26b24
+20r7 seed{6|50R9[12]} 15|29r29 30r41
+21i7 tempCon{11I12} 15|30r10 31r31
+22i7 consumo{integer} 15|12r18 31r10 31r21
+23r7 jitterControl{9|40R9} 15|18r50 23r50 33r50
+24o7 periodoConsumo{8|54O9} 15|17r22 32r24
+25o7 nextTime{8|49O9} 15|17r10 18r65 23r65 32r10 33r65
 X 16 interfac.ads
 74M9*Unsigned_32
 77M9*Unsigned_64

@@ -34,7 +34,7 @@ RV MAX_TASK_ENTRIES=1
 RV MAX_TASKS=1+
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U main%b		main.adb		76163fc8 NE OO SU
+U main%b		main.adb		3140e8e8 NE OO SU
 W actuadorescritorp%s	actuadorescritorp.adb	actuadorescritorp.ali
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
@@ -64,7 +64,7 @@ Z system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
 Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 W text_io%s		text_io.ads		text_io.ali
 
-D actuadorescritorp.ads	20210109105452 7cb95a84 actuadorescritorp%s
+D actuadorescritorp.ads	20210111103556 7cb95a84 actuadorescritorp%s
 D ada.ads		20200228061810 76789da1 ada%s
 D a-calend.ads		20200228061810 474d9720 ada.calendar%s
 D a-caldel.ads		20200228061810 9f20b83d ada.calendar.delays%s
@@ -81,14 +81,14 @@ D a-stream.ads		20200228061810 119b8fb3 ada.streams%s
 D a-tags.ads		20200228061810 edddc8f0 ada.tags%s
 D a-textio.ads		20200228061810 aef4d56d ada.text_io%s
 D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
-D ciudad.ads		20210109105116 5c0c2d17 ciudad%s
+D ciudad.ads		20210111103546 5c0c2d17 ciudad%s
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-c.ads		20200228061810 c624fa43 interfaces.c%s
 D i-cstrin.ads		20200228061810 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
-D main.adb		20210111090302 3d5d3178 main%b
-D planta.ads		20210107122642 5b58d491 planta%s
-D sensorlectorp.ads	20210107110812 e7b9fbbd sensorlectorp%s
+D main.adb		20210111103538 7a0be658 main%b
+D planta.ads		20210111103516 5b58d491 planta%s
+D sensorlectorp.ads	20210111103612 e7b9fbbd sensorlectorp%s
 D system.ads		20200228061810 32a08138 system%s
 D s-atacco.ads		20200228061810 4c36d12f system.address_to_access_conversions%s
 D s-conca2.ads		20200228061810 02a0d7d0 system.concat_2%s
@@ -125,116 +125,116 @@ D s-wchcon.ads		20200228061810 1b7d22d2 system.wch_con%s
 D s-win32.ads		20200228061810 15ac53fb system.win32%s
 D text_io.ads		20200228061810 21b2c898 text_io%s
 G a e
-G c Z b b [main standard 14 11 none]
-G r s generador [main standard 14 11 none] [generadorVIP planta 9 4 none]
-G r l generador [main standard 14 11 none] [generadorVDI planta 9 4 none]
-G r k generador [main standard 14 11 none] [generadorVDF planta 9 4 none]
-G r s consumociudad [main standard 14 11 none] [consumociudadVIP ciudad 9 4 none]
-G r l consumociudad [main standard 14 11 none] [consumociudadVDI ciudad 9 4 none]
-G r k consumociudad [main standard 14 11 none] [consumociudadVDF ciudad 9 4 none]
-G r s actuadorescritorgen [main standard 14 11 none] [actuadorescritorgenVIP actuadorescritorp 11 4 none]
-G r l actuadorescritorgen [main standard 14 11 none] [actuadorescritorgenVDI actuadorescritorp 11 4 none]
-G r k actuadorescritorgen [main standard 14 11 none] [actuadorescritorgenVDF actuadorescritorp 11 4 none]
-G r s sensorlectorgen [main standard 14 11 none] [sensorlectorgenVIP sensorlectorp 9 4 none]
-G r l sensorlectorgen [main standard 14 11 none] [sensorlectorgenVDI sensorlectorp 9 4 none]
-G r k sensorlectorgen [main standard 14 11 none] [sensorlectorgenVDF sensorlectorp 9 4 none]
-G r p none [main standard 14 11 none] [mantenerestable actuadorescritorp__actuadorescritorgen 15 17 none]
-G r o none [main standard 14 11 none] [leer sensorlectorp__sensorlectorgen 11 13 none]
-G r p none [main standard 14 11 none] [leer ciudad__consumociudad 10 17 none]
-G r p none [main standard 14 11 none] [decrementar actuadorescritorp__actuadorescritorgen 14 17 none]
-G r p none [main standard 14 11 none] [incrementar actuadorescritorp__actuadorescritorgen 13 17 none]
-G r p none [main standard 14 11 none] [abrirdispositivo ciudad__consumociudad 11 17 none]
-G r p none [main standard 14 11 none] [cerrardispositivo ciudad__consumociudad 12 17 none]
+G c Z b b [main standard 19 11 none]
+G r s generador [main standard 19 11 none] [generadorVIP planta 14 4 none]
+G r l generador [main standard 19 11 none] [generadorVDI planta 14 4 none]
+G r k generador [main standard 19 11 none] [generadorVDF planta 14 4 none]
+G r s consumociudad [main standard 19 11 none] [consumociudadVIP ciudad 14 4 none]
+G r l consumociudad [main standard 19 11 none] [consumociudadVDI ciudad 14 4 none]
+G r k consumociudad [main standard 19 11 none] [consumociudadVDF ciudad 14 4 none]
+G r s actuadorescritorgen [main standard 19 11 none] [actuadorescritorgenVIP actuadorescritorp 16 4 none]
+G r l actuadorescritorgen [main standard 19 11 none] [actuadorescritorgenVDI actuadorescritorp 16 4 none]
+G r k actuadorescritorgen [main standard 19 11 none] [actuadorescritorgenVDF actuadorescritorp 16 4 none]
+G r s sensorlectorgen [main standard 19 11 none] [sensorlectorgenVIP sensorlectorp 14 4 none]
+G r l sensorlectorgen [main standard 19 11 none] [sensorlectorgenVDI sensorlectorp 14 4 none]
+G r k sensorlectorgen [main standard 19 11 none] [sensorlectorgenVDF sensorlectorp 14 4 none]
+G r p none [main standard 19 11 none] [mantenerestable actuadorescritorp__actuadorescritorgen 20 17 none]
+G r o none [main standard 19 11 none] [leer sensorlectorp__sensorlectorgen 16 13 none]
+G r p none [main standard 19 11 none] [leer ciudad__consumociudad 15 17 none]
+G r p none [main standard 19 11 none] [decrementar actuadorescritorp__actuadorescritorgen 19 17 none]
+G r p none [main standard 19 11 none] [incrementar actuadorescritorp__actuadorescritorgen 18 17 none]
+G r p none [main standard 19 11 none] [abrirdispositivo ciudad__consumociudad 16 17 none]
+G r p none [main standard 19 11 none] [cerrardispositivo ciudad__consumociudad 17 17 none]
 X 1 actuadorescritorp.ads
-9K9*ActuadorEscritorP 25e22 23|7w6 7r29
-11W19*ActuadorEscritorGen 24e27 23|42r21 67r21
-13U17 incrementar 23|128s17 130s17 132s17 135s17 137s17 140s17
-14U17 decrementar 23|113s17 115s17 117s17 120s17 122s17 125s17
-15U17 mantenerEstable 23|44s11 143s17 145s17 147s17
+14K9*ActuadorEscritorP 30e22 23|12w6 12r29
+16W19*ActuadorEscritorGen 29e27 23|45r21 72r21
+18U17 incrementar 23|137s17 139s17 141s17 144s17 146s17 149s17
+19U17 decrementar 23|122s17 124s17 126s17 129s17 131s17 134s17
+20U17 mantenerEstable 23|47s11 152s17 154s17 156s17
 X 2 ada.ads
-16K9*Ada 20e8 23|2r6 3r6 4r6 10r6 10r29 11r6 12r6 12r25 23r19 23r41 26r22
-. 29r24 29r45 31r25 33r7 33r28 33r58 74r15 100r10
+16K9*Ada 20e8 23|7r6 8r6 9r6 15r6 15r29 16r6 17r6 17r25 28r19 28r41 30r22
+. 32r24 32r45 34r25 36r7 36r28 36r58 70r15 108r10
 X 3 a-calend.ads
-36K13*Calendar 409e17 23|10w10 10r33 11r10 29r28 29r49 33r32 33r62 74r19
-42I9*Time<222I9> 23|29r37 74r28
-56V13*Clock{42I9} 23|79s30 81s30 151s33
-83V13*Time_Of{42I9} 23|29s58
-103V14*"+"{42I9} 23|33s72
-106V14*"+"{42I9} 23|79s28 81s28 151s31
+36K13*Calendar 409e17 23|15w10 15r33 16r10 32r28 32r49 36r32 36r62 70r19
+42I9*Time<222I9> 23|32r37 70r28
+56V13*Clock{42I9} 23|85s30 87s30 160s33
+83V13*Time_Of{42I9} 23|32s58
+103V14*"+"{42I9} 23|36s72
+106V14*"+"{42I9} 23|85s28 87s28 160s31
 222I9 Time_Rep<long_long_integer>
 X 5 a-calfor.ads
-24K22*Formatting 223e28 23|11w19 33r41
-176V13*Image{string} 23|33s52
+24K22*Formatting 223e28 23|16w19 36r41
+176V13*Image{string} 23|36s52
 X 12 a-reatim.ads
-39K13*Real_Time 185e18 23|3w10 4r10 12w10 12r29 23r23 23r45 26r26 31r29
-49O9*Time<duration> 23|23r33
-54O9*Time_Span<duration> 23|26r36
-57o4*Time_Span_Zero{54O9} 23|26r72
-61V13*Clock{49O9} 23|23s55
-71V14*"-"{54O9} 23|26s59
-110V13*To_Duration{duration} 23|31s39
-142V13*Time_Of{49O9} 23|26s61
+39K13*Real_Time 185e18 23|8w10 9r10 17w10 17r29 28r23 28r45 30r26 34r29
+49O9*Time<duration> 23|28r33
+54O9*Time_Span<duration> 23|30r36
+57o4*Time_Span_Zero{54O9} 23|30r72
+61V13*Clock{49O9} 23|28s55
+71V14*"-"{54O9} 23|30s59
+110V13*To_Duration{duration} 23|34s39
+142V13*Time_Of{49O9} 23|30s61
 X 13 a-rttiev.ads
-38K23*Timing_Events 81e32 23|4w20
+38K23*Timing_Events 81e32 23|9w20
 X 16 a-textio.ads
-57K13*Text_IO 727e16 23|2w10 33r11 100r14
-264U14*New_Line 23|100s22
-508U14*Put_Line 23|33s19 54s21 103s21 106s21 109s21
+57K13*Text_IO 727e16 23|7w10 36r11 108r14
+264U14*New_Line 23|108s22
+508U14*Put_Line 23|36s19 57s21 111s21 114s21 117s21
 X 18 ciudad.ads
-5K9*Ciudad 22e11 23|9w6 9r29
-9W19*ConsumoCiudad 21e21 23|60r68 156r38 170r21
-10U17 leer 23|91s12
-11U17 abrirDispositivo 23|162s9
-12U17 cerrarDispositivo 23|164s12
+10K9*Ciudad 27e11 23|14w6 14r29
+14W19*ConsumoCiudad 26e21 23|63r68 164r38 178r21
+15U17 leer 23|98s12
+16U17 abrirDispositivo 23|170s9
+17U17 cerrarDispositivo 23|172s12
 X 23 main.adb
-14U11*Main 14b11 180l5 180t9
-15i4 Produccion1{integer} 84m32 93r30
-16i4 Produccion2{integer} 86m32 93r44
-17i4 Produccion3{integer} 88m32 93r58
-18i4 ConsumoGlobal{integer} 91m17 94r43 96r46 103r62 106r58 109r51 163r10
-. 163r32
-20A9 Generadores(24|9W19)<integer> 60r44 169r20
-22U14 PrintRT 22b14 34l8 34t15 102s13 105s13 108s13
-23o7 The_Clock{12|49O9} 26r49
-26o7 As_Time_Span{12|54O9} 31r51
-29i7 Epoch{3|42I9} 33r75
-31o7 Dur{duration} 33r82
-37T14 tareaGenerador 37d30 37d52 40l8 40e22 41b14 57l8 57t22 75r16 76r16
-. 77r16
-37i52 id{integer} 44r30 54r75
-39Y13 avisarme 47b20 51l17 51t25 85s17 87s17 89s17 114s20 116s20 118s20 121s20
-. 123s20 126s20 129s20 131s20 133s20 136s20 138s20 141s20 144s20 146s20 148s20
-42w7 act{1|11W19} 44r7
-60T14 tareaCoordinadora 60d33 60d57 63l8 63e25 64b14 153l8 153t25 171r13
-65o7 delayInicio{duration} 79r16
-66o7 delayNormal{duration} 81r16 151r19
-67w7 act{1|11W19} 113r13 115r13 117r13 120r13 122r13 125r13 128r13 130r13
-. 132r13 135r13 137r13 140r13 143r13 145r13 147r13
-68w7 sen{25|9W19} 84r10 86r10 88r10
-69i7 diferencia{integer} 94m10 112r13 119r16 124r16 127r16 134r16 139r16
-70f7 porcentajeProduccion{float} 95m10 97r34
-71f7 porcentajeConsumo{float} 96m10 97r57
-72f7 porcentajeDiferencia{float} 97m10 101r13 104r16
-73i7 ProduccionGlobal{integer} 93m10 94r24 95r49 103r99 106r95 109r88
-74i7 timer{3|42I9} 79m7 80r19 81m7 150r22 151m10
-75t7 aviso1{37T14} 85r10 114r13 121r13 126r13 129r13 136r13 141r13 144r13
-76t7 aviso2{37T14} 87r10 116r13 123r13 131r13 138r13 146r13
-77t7 aviso3{37T14} 89r10 118r13 133r13 148r13
-156T14 tareaCiudad 156d27 159l8 159e19 160b14 166l8 166t19 172r11
-168U14 inicio 168b14 175l8 175t14 178s4
-169a7 gs{20A9} 171m31 171r31
-170w7 ciu{18|9W19} 171m42 171r42 172m23 172r23
-171t7 mon{60T14}
-172t7 c{156T14}
+19U11*Main 19b11 188l5 188t9
+20i4 Produccion1{integer} 90m32 101r30
+21i4 Produccion2{integer} 92m32 101r44
+22i4 Produccion3{integer} 94m32 101r58
+23i4 ConsumoGlobal{integer} 98m17 102r43 104r46 111r62 114r58 117r51 171r10
+. 171r32
+25A9 Generadores(24|14W19)<integer> 63r44 177r20
+27U14 PrintRT 27b14 37l8 37t15 110s13 113s13 116s13
+28o7 The_Clock{12|49O9} 30r49
+30o7 As_Time_Span{12|54O9} 34r51
+32i7 Epoch{3|42I9} 36r75
+34o7 Dur{duration} 36r82
+40T14 tareaGenerador 40d30 40d52 43l8 43e22 44b14 60l8 60t22 81r16 82r16
+. 83r16
+40i52 id{integer} 47r30 57r75
+42Y13 avisarme 50b20 54l17 54t25 91s17 93s17 95s17 123s20 125s20 127s20 130s20
+. 132s20 135s20 138s20 140s20 142s20 145s20 147s20 150s20 153s20 155s20 157s20
+45w7 act{1|16W19} 47r7
+63T14 tareaCoordinadora 63d33 63d57 66l8 66e25 67b14 162l8 162t25 179r13
+68o7 delayInicio{duration} 85r16
+69o7 delayNormal{duration} 87r16 160r19
+70i7 timer{3|42I9} 85m7 86r19 87m7 159r22 160m10
+72w7 act{1|16W19} 122r13 124r13 126r13 129r13 131r13 134r13 137r13 139r13
+. 141r13 144r13 146r13 149r13 152r13 154r13 156r13
+73w7 sen{25|14W19} 90r10 92r10 94r10
+75i7 diferencia{integer} 102m10 121r13 128r16 133r16 136r16 143r16 148r16
+76f7 porcentajeProduccion{float} 103m10 105r34
+77f7 porcentajeConsumo{float} 104m10 105r57
+78f7 porcentajeDiferencia{float} 105m10 109r13 112r16
+79i7 ProduccionGlobal{integer} 101m10 102r24 103r49 111r99 114r95 117r88
+81t7 aviso1{40T14} 91r10 123r13 130r13 135r13 138r13 145r13 150r13 153r13
+82t7 aviso2{40T14} 93r10 125r13 132r13 140r13 147r13 155r13
+83t7 aviso3{40T14} 95r10 127r13 142r13 157r13
+164T14 tareaCiudad 164d27 167l8 167e19 168b14 174l8 174t19 180r11
+176U14 inicio 176b14 183l8 183t14 186s4
+177a7 gs{25A9} 179m31 179r31
+178w7 ciu{18|14W19} 179m42 179r42 180m23 180r23
+179t7 mon{63T14}
+180t7 c{164T14}
 X 24 planta.ads
-5K9*Planta 23|8w6 8r29 24|23e11
-9W19*Generador 23|20r49 37r41 24|22e17
+10K9*Planta 23|13w6 13r29 24|28e11
+14W19*Generador 23|25r49 40r41 24|27e17
 X 25 sensorlectorp.ads
-7K9*SensorLectorP 23|6w6 6r29 25|18e18
-9W19*SensorLectorGen 23|68r21 25|17e23
-11Y13 leer 23|84s14 86s14 88s14
+12K9*SensorLectorP 23|11w6 11r29 25|23e18
+14W19*SensorLectorGen 23|73r21 25|22e23
+16Y13 leer 23|90s14 92s14 94s14
 X 26 system.ads
-37K9*System 23|5w6 26|200e11
+37K9*System 23|10w6 26|200e11
 67M9*Address
 X 35 s-memory.ads
 53V13*Alloc{26|67M9} 103i<c,__gnat_malloc>22
@@ -246,5 +246,5 @@ X 43 s-stausa.ads
 X 45 s-stalib.adb
 93U14 Break_Start 94i<c,__gnat_break_start>22
 X 60 text_io.ads
-24K9*Text_IO=24:29 23|1w6 54r13 103r13 106r13 109r13
+24K9*Text_IO=24:29 23|6w6 57r13 111r13 114r13 117r13
 
