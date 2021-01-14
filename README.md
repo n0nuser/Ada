@@ -1,6 +1,6 @@
 # Enunciado Práctica ADA - Plantas de Energía y Consumo Ciudad
 
-# Nota Final : 
+# Nota Final : 10
 
 ## Parcipantes:
 
